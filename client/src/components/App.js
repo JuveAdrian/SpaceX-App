@@ -1,10 +1,16 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React, { Component } from 'react';
+
+import Menu from './Menu';
+import ContentContainer from './ContentContainer';
 
 class App extends React.Component {
     render () {
         return (
-            <p> Halo </p>
+            <div>
+                <Menu />
+                <ContentContainer />
+            </div>
+            
         )
     }
 }
