@@ -1,0 +1,24 @@
+.launcheElement {
+    display: block;
+    width: 90%;
+    border: 1px solid #999999;
+    min-height: 260px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.launcheElement-left {
+    width: 60%;
+    float: left;
+    padding: 30px 30px;
+}
+
+.launcheElement-right {
+    width: 25%;
+    float: right;
+}
+
+.launcheElement-right img {
+    height: 200px;
+    padding: 30px 30px;
+}
