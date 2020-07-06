@@ -14,18 +14,17 @@ class ContentContainer extends React.Component {
     render () {
         return (
             <div>
-                    {this.state.launches.map(el => (
-                       
-                <div class="launcheElement">
-                    <div class="launcheElement-left">
-                        <h1>{el.name}</h1>
-                        <span>{el.date_utc}</span>
-                        <p>{el.details}</p>
+                {this.state.launches.map(el => (  
+                    <div class="launcheElement">
+                        <div class="launcheElement-left">
+                            <h1>{el.name}</h1>
+                            <span>{el.date_utc}</span>
+                            <p>{el.details}</p>
+                        </div>
+                        <div class="launcheElement-right">
+                            <img src={el.links.patch.small} />
+                        </div>
                     </div>
-                    <div class="launcheElement-right">
-                        <img src={el.links.patch.small} />
-                    </div>
-                </div>
                 ))}
             </div>
             
