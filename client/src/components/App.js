@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import Menu from './Menu';
-import ContentContainer from './ContentContainer';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 
-class App extends React.Component {
+//Pages
+import HomePage from '../pages/index';
+
+class App extends Component {
     render () {
         return (
-            <div>
-                <Menu />
-                <ContentContainer />
-            </div>
-            
+            <Router>
+                <Route path="/" component={HomePage} />
+            </Router>
         )
     }
 }
