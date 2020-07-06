@@ -1,9 +1,14 @@
 import React from 'react';
 
+import Menu from '../components/Menu';
+
 class Crew extends React.Component {
     render () {
         return (
-            <h1>SpaceX Crew</h1>
+            <div>
+                <Menu />
+                <h1>SpaceX Crew</h1>
+            </div>
         )
     }
 }
