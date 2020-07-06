@@ -3,7 +3,10 @@ import React from 'react';
 class Logo extends React.Component {
     render() {
         return (
-            <p>Logo</p>
+            <div className="logoContainer">
+                <p>Logo</p>
+            </div>
+           
         );
     }
 }

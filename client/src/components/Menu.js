@@ -7,8 +7,10 @@ class Menu extends React.Component {
     render () {
         return (
             <div className="menu-container">
-                <Logo />
-                <Nav />
+                <nav>
+                    <Logo />
+                    <Nav />
+                </nav>
             </div>
         );
     }
