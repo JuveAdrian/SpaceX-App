@@ -8,7 +8,7 @@ class ContentContainer extends React.Component {
     componentDidMount() {
         fetch('https://api.spacexdata.com/v4/launches')
             .then(res => res.json())
-            .then(json => this.setState({launches : json}))
+            .then(json => this.setState({launches : json}));
     }
 
     render () {
@@ -18,9 +18,10 @@ class ContentContainer extends React.Component {
                     <div class="launcheElement">
                         <div class="launcheElement-left">
                             <h1>{el.name}</h1>
-                            <img src={el.links.patch.small} alt={el.name} />
+                            
                             <span>{el.date_utc}</span>
                             <p>{el.details}</p>
+                            <img src={el.links.patch.small} alt={el.name} />
                             <button>Read More</button>
                         </div>  
                     </div>

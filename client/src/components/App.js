@@ -7,6 +7,7 @@ import HomePage from '../pages/index';
 import Launches from '../pages/launches';
 import Rockets from '../pages/rockets';
 import Crew from '../pages/crew';
+import Launche from '../pages/launche';
 import Page404 from '../pages/404';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                     <Route exact path="/launches" component={Launches} />
                     <Route exact path="/rockets" component={Rockets} />
                     <Route exact path="/crew" component={Crew} />
+                    <Route exact path="/launche" component={Launche} />
                     <Route exact path="/404" component={Page404} />
                     <Redirect to="/404" />
                 </Switch>

@@ -16,7 +16,7 @@
 
 .launcheElement {
     width: 30%;
-    min-height: 350px;
+    min-height: 550px;
     float: left;
     margin: 0 1.5%;
     margin-bottom: 30px;
@@ -31,13 +31,14 @@
 }
 
 .launcheElement-left img {
-    width: 30%;
+    width: 45%;
+    padding-left: 20%;
     margin-top: 25px;
+    margin-bottom: 30px;
     margin-left: 20px;
 }
 
 .launcheElement-left h1 {
-    float: left;
     margin-right: 5px;
     margin-top: 20px;
 }
@@ -55,6 +56,7 @@
     margin: 0 30%;
     padding: 7px 14px;
     margin-bottom: 10px;
+    vertical-align: bottom;
 }
 
 nav {
