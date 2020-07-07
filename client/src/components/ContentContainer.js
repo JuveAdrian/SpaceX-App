@@ -22,7 +22,7 @@ class ContentContainer extends React.Component {
                             <p>{el.details}</p>
                         </div>
                         <div class="launcheElement-right">
-                            <img src={el.links.patch.small} />
+                            <img src={el.links.patch.small} alt={el.name} />
                         </div>
                     </div>
                 ))}
