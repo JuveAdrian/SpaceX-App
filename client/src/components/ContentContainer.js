@@ -18,7 +18,6 @@ class ContentContainer extends React.Component {
                     <div class="launcheElement">
                         <div class="launcheElement-left">
                             <h1>{el.name}</h1>
-                            
                             <span>{el.date_utc}</span>
                             <p>{el.details}</p>
                             <img src={el.links.patch.small} alt={el.name} />
