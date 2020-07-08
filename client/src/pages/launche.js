@@ -1,10 +1,26 @@
 import React from 'react';
 
+import Menu from '../components/Menu';
+
 class Launche extends React.Component {
+        state = {
+            id: this.props.match.params.id,
+            launche: []
+        }
+    
+    
+        useEffect() {
+            fetch(`https://api.spacexdata.com/v4/launches/${this.state.id}`)
+                .then(res => this.setState({ launche: res.data }));
+        }
+   
+
     render () {
+        console.log(this.state.launche);
         return (
             <div>
-                <h1>Nagłówek</h1>
+                 <Menu />
+                 <h1>{this.state.launche.name}</h1>
             </div>
         )
     }

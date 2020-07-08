@@ -18,16 +18,18 @@ class Launches extends React.Component {
         return (
             <div>
                 <Menu />
-                <div class="element-container">
+                <div className="element-container">
                     {this.state.launches.map(el => (  
-                        <div class="launcheElement">
-                            <div class="launcheElement-left">
+                        <div className="launcheElement" key="el.id">
+                            <div className="launcheElement-left">
                                 <h1>{el.name}</h1>
                                 
                                 <span>{el.date_utc}</span>
                                 <p>{el.details}</p>
                                 <img src={el.links.patch.small} alt={el.name} />
-                                <Link to="/launche"><button>Read More</button></Link>
+                                <Link to={{
+                                    pathname: `/launche/${el.id}`
+                                }} id="test"><button>Read More</button></Link>
                             </div>  
                         </div>
                     ))}

@@ -13,10 +13,10 @@ class ContentContainer extends React.Component {
 
     render () {
         return (
-            <div class="element-container">
+            <div className="element-container">
                 {this.state.launches.map(el => (  
-                    <div class="launcheElement">
-                        <div class="launcheElement-left">
+                    <div className="launcheElement">
+                        <div className="launcheElement-left">
                             <h1>{el.name}</h1>
                             <span>{el.date_utc}</span>
                             <p>{el.details}</p>
