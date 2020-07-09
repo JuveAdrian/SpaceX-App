@@ -1,6 +1,8 @@
 import React from 'react';
+import Async from 'react-async';
 
 import Menu from '../components/Menu';
+
 
 class Launche extends React.Component {
         constructor(props) {
