@@ -7,8 +7,9 @@ class Launche extends React.Component {
     render() {
         return (
             <div>
-                <h1>????</h1>
-                <p>{this.props.test}</p>
+                <Menu />
+                <p>{this.props.location.state.name}</p>
+                <img src={this.props.location.state.img}></img>
             </div>
         )
     }

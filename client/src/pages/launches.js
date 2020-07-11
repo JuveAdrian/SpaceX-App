@@ -23,14 +23,15 @@ class Launches extends React.Component {
                         <div className="launcheElement" key="el.id">
                             <div className="launcheElement-left">
                                 <h1>{el.name}</h1>
-                                
                                 <span>{el.date_utc}</span>
                                 <p>{el.details}</p>
                                 <img src={el.links.patch.small} alt={el.name} />
-                                <Link to={{
-                                    pathname: `/launche/${el}`,
-                                    
-                                }} state={{test: 'testowo'}} id="test"><button>Read More</button></Link>
+                                <Link to={{ 
+                                    pathname: `/launche/${el.id}`, 
+                                    state: { 
+                                        name: el.name,
+                                        img: el.links.patch.small }
+                                }}><button>Read More</button></Link>
                             </div>  
                         </div>
                     ))}
