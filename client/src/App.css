@@ -84,3 +84,31 @@ nav > ul > li > a {
     padding: 0.5em 0.5em;
     text-decoration: none;
 }
+
+/* Styling Crew Page */
+.crewContainer{
+    width: 90%;
+    margin: 20px 5%;
+}
+
+.crewContainer h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.3em;
+}
+
+.crewMember {
+    float: left;
+    margin-left: 20px;
+    width: 46%;
+}
+
+.crewMember h1 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.crewMember img{
+    max-width: 90%;
+    margin-left: 5%;
+}
