@@ -19,12 +19,11 @@ class Launches extends React.Component {
             <div>
                 <Menu />
                 <div className="element-container">
+                    <h1>SpaceX Launches</h1>
                     {this.state.launches.map(el => (  
                         <div className="launcheElement" key="el.id">
                             <div className="launcheElement-left">
                                 <h1>{el.name}</h1>
-                                <span>{el.date_utc}</span>
-                                <p>{el.details}</p>
                                 <img src={el.links.patch.small} alt={el.name} />
                                 <Link to={{ 
                                     pathname: `/launche/${el.id}`, 
