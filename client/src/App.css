@@ -39,7 +39,6 @@
 .launcheElement-left img {
     width: 45%;
     padding-left: 20%;
-    margin-top: 15px;
     margin-bottom: 30px;
     margin-left: 20px;
 }
@@ -178,4 +177,10 @@ nav > ul > li > a:hover {
     margin: 2% 2%;
     float: left;
     line-height: 1em;
+}
+
+/* Launche Page */
+
+.launcheContainer img {
+    width: 500px;
 }

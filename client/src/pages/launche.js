@@ -8,8 +8,13 @@ class Launche extends React.Component {
         return (
             <div>
                 <Menu />
-                <p>{this.props.location.state.name}</p>
-                <img src={this.props.location.state.img}></img>
+                <div className="launcheContainer">
+                    <p>{this.props.location.state.name}</p>
+                    <img src={this.props.location.state.img}></img>
+                    {this.props.location.state.gallery.map( img => (
+                        <img src={img} />
+                    ))}
+                </div>
             </div>
         )
     }

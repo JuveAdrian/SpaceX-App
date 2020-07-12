@@ -29,7 +29,8 @@ class Launches extends React.Component {
                                     pathname: `/launche/${el.id}`, 
                                     state: { 
                                         name: el.name,
-                                        img: el.links.patch.small }
+                                        img: el.links.patch.small,
+                                        gallery: el.links.flickr.original }
                                 }}><button>Read More</button></Link>
                             </div>  
                         </div>
