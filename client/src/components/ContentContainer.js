@@ -15,8 +15,7 @@ class ContentContainer extends React.Component {
 
     render () {
         return (
-            <img src={Photo} />
-            
+            <img src={Photo} alt="main" /> 
         )
     }
 }

@@ -22,7 +22,7 @@
 }
 
 .launcheElement {
-    width: 30%;
+    width: 21%;
     float: left;
     margin: 0 1.5%;
     margin-bottom: 30px;
@@ -60,7 +60,7 @@
 
 .launcheElement-left button {
     text-align: center;
-    margin: 0 34%;
+    margin: 0 29%;
     padding: 7px 14px;
     margin-bottom: 10px;
     vertical-align: bottom;
