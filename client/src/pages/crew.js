@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Menu from '../components/Menu';
+import ContentHeader from '../components/ContentContainer/ContentHeader';
 
 class Crew extends React.Component {
     state = {
-        crew: []
+        crew: [],
+        pageName: 'SpaceX Crew'
     }
 
     componentDidMount() {
@@ -20,7 +22,7 @@ class Crew extends React.Component {
                 <Menu />
                
                 <div className="crewContainer">
-                <h1>SpaceX Crew</h1>
+                <ContentHeader state={{ pageName: this.state.pageName }} />
                     {this.state.crew.map( el => (
                         <div className="crewMember">
                             <Link to={{ 

@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Menu from '../components/Menu';
+import ContentHeader from '../components/ContentContainer/ContentHeader';
 
 class Launches extends React.Component {
     state = {
-        launches: []
+        launches: [],
+        pageName: 'SpaceX Launches'
     }
 
     componentDidMount() {
@@ -19,7 +21,7 @@ class Launches extends React.Component {
             <div>
                 <Menu />
                 <div className="element-container">
-                    <h1>SpaceX Launches</h1>
+                    <ContentHeader state={{pageName: this.state.pageName}} />
                     {this.state.launches.map(el => (  
                         <div className="launcheElement" key="el.id">
                             <div className="launcheElement-left">
