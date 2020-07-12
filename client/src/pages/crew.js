@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Menu from '../components/Menu';
 
@@ -22,7 +23,18 @@ class Crew extends React.Component {
                 <h1>SpaceX Crew</h1>
                     {this.state.crew.map( el => (
                         <div className="crewMember">
-                            <h1>{ el.name }</h1>
+                            <Link to={{ 
+                                pathname: `/member/${el.id}`,
+                                state: {
+                                    wikipedia: el.wikipedia,
+                                    agency: el.agency,
+                                    status: el.status,
+                                    image: el.image,
+                                    name: el.name
+                                } 
+                            }} >
+                                <h1>{ el.name }</h1>
+                            </Link>
                             <img src={el.image} alt={el.name} />
                         </div>
                         

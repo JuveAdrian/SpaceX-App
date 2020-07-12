@@ -71,6 +71,7 @@
     float: left;
     height: 120px;
     width: 30%;
+    margin-right: 70px;
 }
 
 .logoContainer img{
@@ -142,4 +143,39 @@ nav > ul > li > a:hover {
 .crewMember img{
     max-width: 90%;
     margin-left: 5%;
+}
+
+/* Member Page */
+
+.memberContainer {
+    width: 90%;
+    margin: 20px 5%;
+}
+
+.memberContainer h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.3em;
+    margin-bottom: 30px;
+}
+
+.memberContainer img {
+    width: 46%;
+    margin: 0 2%;
+    float: left;
+}
+
+.memberContainer p {
+    width: 46%;
+    margin: 2% 2%;
+    float: left;
+    font-size: 1.25em;
+    line-height: 1.6em;
+}
+
+.memberContainer h3 {
+    width: 46%;
+    margin: 2% 2%;
+    float: left;
+    line-height: 1em;
 }

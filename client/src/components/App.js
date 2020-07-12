@@ -8,6 +8,7 @@ import Launches from '../pages/launches';
 import Rockets from '../pages/rockets';
 import Crew from '../pages/crew';
 import Launche from '../pages/launche';
+import Member from '../pages/member';
 import Page404 from '../pages/404';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
                     <Route exact path="/rockets" component={Rockets} />
                     <Route exact path="/crew" component={Crew} />
                     <Route path="/launche/:id" component={Launche} />
+                    <Route path="/member/" component={Member} />
                     <Route exact path="/404" component={Page404} />
                     <Redirect to="/404" />
                 </Switch>
