@@ -199,3 +199,56 @@ input:focus{
         transform: translateX(0px);
     }
 }
+
+
+main {
+    width: 100%;
+    background-color:#e5e5ec;
+    padding-top: 20px;
+    height: 100%;
+    min-height: 90vh;
+}
+
+.item-container {
+    width: 46%;
+    margin: 10px 2%;
+    height: 60px;
+    float: left;
+    padding: 5px 12px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+}
+
+.image {
+    float: left;
+}
+
+.image img{
+    height: 50px;
+    
+}
+
+.describe {
+    margin-left: 70px;
+    line-height: 50px;
+    align-items: center;
+}
+
+.describe h1 {
+    float: left;
+    font-size: 15px;
+}
+
+.describe span {
+    margin-right: 20px;
+    font-size: 12px;
+    float: right;
+}
+
+@media screen and (max-width: 1024px){
+    main {
+        padding-top: 70px;
+    }
+}
