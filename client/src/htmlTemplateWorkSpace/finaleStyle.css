@@ -209,6 +209,26 @@ main {
     min-height: 90vh;
 }
 
+.data-container-header{
+    width: 96%;
+    margin: 2% 2%;
+    background: rgb(232,175,28);
+background: linear-gradient(0deg, rgba(232,175,28,1) 0%, rgba(232,175,28,1) 100%, rgba(251,209,100,1) 100%);
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+}
+
+.data-container-header h1 {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 30px;
+    width: bold;
+
+}
+
+
 .item-container {
     width: 46%;
     margin: 10px 2%;
