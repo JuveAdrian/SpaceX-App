@@ -293,3 +293,49 @@ main {
         padding-top: 70px;
     }
 }
+
+/* Single Launche Page  */
+
+.single-item-container {
+    display: flex;
+    width: 96%;
+    margin: 2% 2%;
+    min-height: 71vh;
+    background-color: #fff;
+}
+
+.single-item-container .image {
+    width: 25%;
+}
+
+.single-item-container .image img {
+    width: 350px;
+    height: auto;
+}
+
+
+.single-item-container .describe {
+    width: 45%;
+    float: left;
+}
+
+.single-item-container .describe p {
+    line-height: 20px;
+}
+
+.single-item-container .details {
+    width: 30%;
+}
+
+.single-item-container .gallery {
+    width: auto;
+    height: 96%;
+    margin: 2% 2%;
+    
+}
+
+.single-item-container .gallery img {
+    max-height: 150px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
