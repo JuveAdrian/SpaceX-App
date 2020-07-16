@@ -3,17 +3,13 @@ import React from 'react';
 import Logo from './Menu/Logo';
 import Nav from './Menu/Nav';
 import Search from './Menu/Search';
-import { Switch } from 'react-router-dom';
+import Burger from './Menu/Burger';
 
 class Menu extends React.Component {
     render () {
         return (
             <nav>
-                <div className="burger">
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                    <div className="line3"></div>
-                </div>
+                <Burger />
                 <Logo />
                 <Nav />
                 <Search />

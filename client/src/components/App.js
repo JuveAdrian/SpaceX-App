@@ -10,6 +10,7 @@ import Crew from '../pages/crew';
 import Launche from '../pages/launche';
 import Member from '../pages/member';
 import Page404 from '../pages/404';
+import About from '../pages/about';
 
 class App extends Component {
     render () {
@@ -17,6 +18,7 @@ class App extends Component {
             <Router>
                 <Switch>
                     <Route exact path="/" component={HomePage} />
+                    <Route exact path="/about" component={About} />
                     <Route exact path="/launches" component={Launches} />
                     <Route exact path="/rockets" component={Rockets} />
                     <Route exact path="/crew" component={Crew} />
