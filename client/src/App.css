@@ -1,186 +1,295 @@
-* {
-    font-family: 'Montserrat', sans-serif;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-* {
-    font-family: 'Montserrat', sans-serif;
-}
 
-.element-container {
-    width: 90%;
-    margin: 0px 5%;
-    max-width: 1300px;
-    min-width: 1050px;
-    margin-top: 30px;
-}
-
-.element-container h1 {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2.3em;
-}
-
-.launcheElement {
-    width: 21%;
-    float: left;
-    margin: 0 1.5%;
-    margin-bottom: 30px;
-    border: 1px solid #b1b1b1;
-    -webkit-box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.6);
-}
-
-.launcheElement-left {
-    padding: 5px 20px;
-}
-
-.launcheElement-left img {
-    width: 45%;
-    padding-left: 20%;
-    margin-bottom: 30px;
-    margin-left: 20px;
-}
-
-.launcheElement-left h1 {
-    margin-right: 5px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.launcheElement-left span {
-    float: left;
-}
-
-.launcheElement-left p {
-    float: left;
-}
-
-.launcheElement-left button {
-    text-align: center;
-    margin: 0 29%;
-    padding: 7px 14px;
-    margin-bottom: 10px;
-    vertical-align: bottom;
-}
-
-.logoContainer {
-    float: left;
-    height: 120px;
-    width: 30%;
-    margin-right: 70px;
-}
-
-.logoContainer img{
-    height: 100%;
-}
-
-nav {
-    background-color: #Fff;
-    margin: 0 5%;
-    overflow: hidden;
-    height: 120px;
-    width: 90%;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-nav ul{
+.app-container {
+    width: auto;
     margin: 0;
     padding: 0;
-    float: left;
+    background-color: #f9fafe;
+    height: 600px;
 }
-nav ul li {
-    /* This allow us to arrange list items in a row, without using float */
-    display: inline-block;
-    list-style-type: none;
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60px;
+    background-color: #5d81ec;
+    color: #a8baf1;
 }
- 
-/* Create a style for the first level items */
-nav > ul > li > a {
-    color: #000;
-    font-size: 1.4em;
-    margin-top: 25px;
-    margin-right: 100px;
-    height: 120px;
-    display: block;
-    line-height: 2em;
-    padding: 0.5em 0.5em;
+
+.logo{
+    margin-left: 30px;;
+}
+
+.logo h1 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 26px;
+}
+
+.logo a {
     text-decoration: none;
-    text-align: center;
 }
 
-nav > ul > li > a:hover {
-    text-decoration: underline;
-}
-
-/* Styling Crew Page */
-.crewContainer{
-    width: 90%;
-    margin: 20px 5%;
-}
-
-.crewContainer h1 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2.3em;
-}
-
-.crewMember {
-    float: left;
+.nav-links {
+    display: flex;
+    width: 50%;
     margin-left: 20px;
-    width: 46%;
 }
 
-.crewMember h1 {
-    font-size: 1.4em;
-    text-align: center;
+.nav-links a{
+    min-height: 8vh;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 13px;
+    padding: 20px 20px;
+    color: #a8baf1;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
-.crewMember img{
-    max-width: 90%;
-    margin-left: 5%;
+.nav-links a:hover {
+    background-color: #5275e0;
 }
 
-/* Member Page */
-
-.memberContainer {
-    width: 90%;
-    margin: 20px 5%;
+.search {
+    width: 20%;
 }
 
-.memberContainer h1 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2.3em;
-    margin-bottom: 30px;
+.search input {
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    padding: 0 15px;
+    margin-right: 20px;
 }
 
-.memberContainer img {
-    width: 46%;
-    margin: 0 2%;
-    float: left;
+.search input:active {
+    border: none;
 }
 
-.memberContainer p {
-    width: 46%;
+input:focus{
+    outline: none;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226,226,226);
+    margin: 5px 25px;
+}
+
+@media screen and (max-width: 1024px){
+    body {
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .search {
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        line-height: 40px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #a8baf1;
+        background-color: #5d81ec;
+    }
+    .search input {
+        width: 96%;
+        margin: 0 2%;
+        align-items: center;
+        border-radius: 0px;
+        border-radius: 15px;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 110px;
+        max-width: 1024px;
+        width: 100%;
+        vertical-align: top;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .nav-links a {
+        min-height: 5vh;
+        height: 30px;
+        display: inline-block;
+        background-color: #5d81ec;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        line-height: 10px;
+        border-top: 1px solid #a8baf1;
+        width: 100%;
+        color: #fff;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(800px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+main {
+    width: 100%;
+    background-color:#e5e5ec;
+    padding-top: 20px;
+    height: 100%;
+    min-height: 90vh;
+}
+
+.data-container-header{
+    width: 96%;
     margin: 2% 2%;
-    float: left;
-    font-size: 1.25em;
-    line-height: 1.6em;
+    background: rgb(232,175,28);
+    background: linear-gradient(0deg, rgba(232,175,28,1) 0%, rgba(232,175,28,1) 100%, rgba(251,209,100,1) 100%);
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
 }
 
-.memberContainer h3 {
+.data-container-header h1 {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 30px;
+    width: 800;
+
+}
+
+.item-container {
     width: 46%;
-    margin: 2% 2%;
+    margin: 10px 2%;
+    height: 60px;
     float: left;
-    line-height: 1em;
+    padding: 5px 12px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
 }
 
-/* Launche Page */
+.image {
+    float: left;
+}
 
-.launcheContainer img {
-    width: 500px;
+.image img{
+    height: 50px;
+    
+}
+
+.describe {
+    margin-left: 70px;
+    line-height: 50px;
+    align-items: center;
+}
+
+.describe h1 {
+    float: left;
+    font-size: 15px;
+}
+
+.describe span {
+    margin-right: 20px;
+    font-size: 12px;
+    float: right;
+}
+
+.describe button {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: #E84A7B;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+    color:#fff;
+    border: none;
+    margin-top: 5px;
+    padding: 5px 15px;
+}
+
+@media screen and (max-width: 1024px){
+    main {
+        padding-top: 70px;
+    }
 }

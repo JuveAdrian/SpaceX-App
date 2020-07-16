@@ -63,11 +63,18 @@ nav{
 }
 
 .logo{
+    margin-left: 30px;;
+}
+
+.logo h1 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 26px;
-    margin-left: 30px;;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .nav-links {
