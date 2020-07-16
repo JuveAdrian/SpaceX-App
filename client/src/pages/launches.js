@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Menu from '../components/Menu';
-import ContentHeader from '../components/ContentContainer/ContentHeader';
 import ContentData from '../components/ContentContainer/ContentData';
 
 class Launches extends React.Component {

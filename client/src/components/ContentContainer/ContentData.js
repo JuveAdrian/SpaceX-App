@@ -11,7 +11,17 @@ class ContentData extends React.Component {
                 <ContentHeader state={{ pageName: this.props.state.pageName }} />
                 {this.props.state.launches.map(el => (
                 <div className="item-container" key="el.id">
-                    <div className="image"><a href="#"><img src={el.links.patch.small} /></a></div>
+                    <div className="image">
+                    <Link to={{ 
+                            pathname: `/launche/${el.id}`, 
+                            state: { 
+                                name: el.name,
+                                img: el.links.patch.small,
+                                gallery: el.links.flickr.original }
+                        }}>
+                            <img src={el.links.patch.small} />
+                        </Link>
+                    </div>
                     <div className="describe">
                         <a href="#"><h1 className="name">{el.name}</h1></a>
                         <Link to={{ 
