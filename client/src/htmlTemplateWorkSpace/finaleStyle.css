@@ -297,7 +297,6 @@ main {
 /* Single Launche Page  */
 
 .single-item-container {
-    display: flex;
     width: 96%;
     margin: 2% 2%;
     min-height: 71vh;
@@ -305,18 +304,24 @@ main {
 }
 
 .single-item-container .image {
-    width: 25%;
+    width: 22%;
+    background-color: aqua;
+    padding: 0 3%;
 }
 
 .single-item-container .image img {
-    width: 350px;
-    height: auto;
+    width: auto;
+    height: 300px;
+
 }
 
 
 .single-item-container .describe {
-    width: 45%;
+    width: 40%;
+    margin-left: 0;
     float: left;
+    height: 300px;
+    background-color: blueviolet;
 }
 
 .single-item-container .describe p {
@@ -324,7 +329,11 @@ main {
 }
 
 .single-item-container .details {
+    float: left;
     width: 30%;
+    height: 300px;
+    margin-bottom: 30px;
+    background-color: #E84A7B;
 }
 
 .single-item-container .gallery {
