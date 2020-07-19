@@ -299,10 +299,10 @@ main {
 .single-item-container {
     width: 96%;
     margin: 2% 2%;
-    min-height: 71vh;
+    min-height: 69vh;
     background-color: #fff;
     padding-top: 30px;
-    max-width: ;
+    height: 100%;
 }
 
 .single-item-container .success {
@@ -347,10 +347,16 @@ main {
     float: left;
 }
 
+.single-item-container .describe h1 {
+    width: 100%;
+    text-align: center; 
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .single-item-container .describe p {
     line-height: 23px;
     text-align: center;
-    margin: auto;
 }
 
 .single-item-container .details {
