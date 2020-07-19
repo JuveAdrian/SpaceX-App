@@ -29,7 +29,12 @@ class ContentData extends React.Component {
                             state: { 
                                 name: el.name,
                                 img: el.links.patch.small,
-                                gallery: el.links.flickr.original }
+                                gallery: el.links.flickr.original,
+                                success: el.success,
+                                details: el.details,
+                                date: el.date_utc,
+                                launchpad: el.launchpad,
+                                rocket: el.rocket }
                         }}>
                             <button>Read More</button>
                         </Link>

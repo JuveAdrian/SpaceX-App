@@ -50,7 +50,7 @@ table {
     margin: 0;
     padding: 0;
     background-color: #f9fafe;
-    height: 600px;
+    min-height: 600px;
 }
 
 nav{
@@ -292,4 +292,114 @@ main {
     main {
         padding-top: 70px;
     }
+}
+
+/* Single Launche Page  */
+
+.single-item-container {
+    width: 96%;
+    margin: 2% 2%;
+    min-height: 69vh;
+    background-color: #fff;
+    padding-top: 30px;
+    height: 100%;
+}
+
+.single-item-container .success {
+    width: 70%;
+    background-color: #2cb643;
+    text-align: center;
+    font-size: 30px;
+    padding: 15px 0;
+    margin: 0 15%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: #fff
+}
+
+.single-item-container .describe-group {
+    min-height: 300px;
+    width: 100%;
+}
+
+.single-item-container .image {
+    width: 25%;
+    padding: 20px 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.single-item-container .image img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    max-width: 200px;
+}
+
+
+.single-item-container .describe {
+    width: 50%;
+    min-height: 300px;
+    margin-left: 0;
+    padding: 20px 20px;
+    float: left;
+}
+
+.single-item-container .describe h1 {
+    width: 100%;
+    text-align: center; 
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.single-item-container .describe p {
+    line-height: 23px;
+    text-align: center;
+}
+
+.single-item-container .details {
+    float: left;
+    width: 25%;
+    padding: 10px 0;
+    min-height: 300px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.single-item-container .details ul {
+    margin: auto;
+    padding-left: 10px;
+    border-left: 1px solid #a8baf1;
+}
+
+.single-item-container .details ul li span {
+    font-weight: bold;
+}
+.single-item-container .gallery {
+    width: auto;
+    height: 96%;
+    margin: 4% 2%;
+    
+    border-top: 1px solid #a8baf1;
+}
+
+.single-item-container .gallery h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.single-item-container .gallery img {
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.cropped {
+    width: 19.45%; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
 }
