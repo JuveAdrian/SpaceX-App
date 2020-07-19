@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import Menu from '../components/Menu';
 
@@ -12,12 +13,17 @@ class Launche extends React.Component {
         color: '',
     }
 
-    componentDidMount() {
+    missionStatus() {
         if(this.props.location.state.success) {
             this.setState({status : 'Success'})
         } else {
             this.setState({status : 'Failed', color: '#FF3232'})
         }
+    }
+
+    componentDidMount() {
+        
+        this.missionStatus();
 
         fetch(`https://api.spacexdata.com/v4/launchpads/${this.state.launchpadId}`)
             .then(res => res.json())
@@ -49,7 +55,7 @@ class Launche extends React.Component {
                             </div>
                             <div className="details">
                                 <ul>
-                                    <li><span>Launch Date:</span> {this.props.location.state.date}</li>
+                                    <li><span>Launch Date:</span> {moment(this.props.location.state.date).format('MMMM D, YYYY')}</li>
                                     <li><span>Launch site:</span> {this.state.launchpad}</li>
                                     <li><span>Rocket:</span> {this.state.rocket}</li>
                                 </ul>
