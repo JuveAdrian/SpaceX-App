@@ -4,10 +4,12 @@ import Menu from '../components/Menu';
 
 class Launche extends React.Component {
     state = {
-        id: this.props.location.state.launchpad,
-        launchpad: [],
+        launchpadId: this.props.location.state.launchpad,
+        rocketId: this.props.location.state.rocket,
+        launchpad: '',
+        rocket: '',
         status: '',
-        color: ''
+        color: '',
     }
 
     componentDidMount() {
@@ -17,16 +19,14 @@ class Launche extends React.Component {
             this.setState({status : 'Failed', color: '#FF3232'})
         }
 
-        console.log(this.props.location.state.launchpad);
-        console.log(this.state.launchpad);
-        fetch(`https://api.spacexdata.com/v4/launchpads/${this.state.id}`)
+        fetch(`https://api.spacexdata.com/v4/launchpads/${this.state.launchpadId}`)
             .then(res => res.json())
-            .then(json => this.setState({launchpad : json})).then(
-                console.log(this.state.launchpad)
-            )
-    }
+            .then(json => this.setState({launchpad : json.locality}))
 
-    com
+        fetch(`https://api.spacexdata.com/v4/rockets/${this.state.rocketId}`)
+            .then(res => res.json())
+            .then(json => this.setState({rocket : json.name}))  
+    }
 
     render() {
         return (
@@ -50,8 +50,8 @@ class Launche extends React.Component {
                             <div className="details">
                                 <ul>
                                     <li><span>Launch Date:</span> {this.props.location.state.date}</li>
-                                    <li><span>Launch site:</span></li>
-                                    <li><span>Rocket:</span> {this.props.location.state.rocket}</li>
+                                    <li><span>Launch site:</span> {this.state.launchpad}</li>
+                                    <li><span>Rocket:</span> {this.state.rocket}</li>
                                 </ul>
                             </div>
                         </div>
