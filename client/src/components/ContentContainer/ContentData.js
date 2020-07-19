@@ -17,13 +17,30 @@ class ContentData extends React.Component {
                             state: { 
                                 name: el.name,
                                 img: el.links.patch.small,
-                                gallery: el.links.flickr.original }
+                                gallery: el.links.flickr.original,
+                                success: el.success,
+                                details: el.details,
+                                date: el.date_utc,
+                                launchpad: el.launchpad,
+                                rocket: el.rocket }
                         }}>
-                            <img src={el.links.patch.small} />
+                            <img src={el.links.patch.small} alt="" />
                         </Link>
                     </div>
                     <div className="describe">
-                        <a href="#"><h1 className="name">{el.name}</h1></a>
+                        <Link to={{ 
+                                pathname: `/launche/${el.id}`, 
+                                state: { 
+                                    name: el.name,
+                                    img: el.links.patch.small,
+                                    gallery: el.links.flickr.original,
+                                    success: el.success,
+                                    details: el.details,
+                                    date: el.date_utc,
+                                    launchpad: el.launchpad,
+                                    rocket: el.rocket }
+                            }}><h1 className="name">{el.name}</h1>
+                        </Link>
                         <Link to={{ 
                             pathname: `/launche/${el.id}`, 
                             state: { 

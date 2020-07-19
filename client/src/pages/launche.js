@@ -16,7 +16,7 @@ class Launche extends React.Component {
 
                         <div className="describe-group">
                             <div className="image">
-                                <img src={this.props.location.state.img} />
+                                <img src={this.props.location.state.img} alt="" />
                             </div>
                             <div className="describe">
                                 <h1>{this.props.location.state.name}</h1>
