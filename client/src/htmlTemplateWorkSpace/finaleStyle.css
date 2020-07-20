@@ -44,13 +44,19 @@ table {
 	border-spacing: 0;
 }
 
+body {
+    height: auto;
+}
+
 
 .app-container {
     width: auto;
     margin: 0;
     padding: 0;
     background-color: #f9fafe;
-    min-height: 600px;
+    height: auto;
+    
+    bottom: -200px;
 }
 
 nav{
@@ -382,6 +388,7 @@ main {
     width: auto;
     height: 96%;
     margin: 4% 2%;
+    padding-bottom: 30px;
     
     border-top: 1px solid #a8baf1;
 }
