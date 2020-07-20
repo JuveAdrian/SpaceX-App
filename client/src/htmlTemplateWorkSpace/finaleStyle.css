@@ -462,3 +462,27 @@ main {
     float: left;
     margin-left: 5%;
 }
+
+/* Member Page */
+
+.crewSingleMember {
+    background-color: #fff;
+    width: 49%;
+    float: left;
+}
+
+.crewSingleMember .photo {
+    width: 100%;
+    background-color: #E84A7B;
+    float: left;
+}
+
+.crewSingleMember .photo img{ 
+    width: 100%;
+}
+
+.crewSingleMember .memberBio {
+    width: 49%;
+    background-color: blanchedalmond;
+    float: left;
+}
