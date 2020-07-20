@@ -20,7 +20,6 @@ class Crew extends React.Component {
         return (
             <div>
                 <Menu />
-               
                 <div className="crewContainer">
                 <ContentHeader state={{ pageName: this.state.pageName }} />
                     <div className="crewMemberBox">
@@ -51,12 +50,9 @@ class Crew extends React.Component {
                                 <img src={el.image} alt={el.name} />
                             </Link>
                         </div>
-                        
                     ))}
                     </div>
                 </div>
-                
-                
             </div>
         )
     }

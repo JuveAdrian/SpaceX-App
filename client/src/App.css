@@ -212,8 +212,7 @@ main {
     width: 100%;
     background-color:#e5e5ec;
     padding-top: 20px;
-    height: 100%;
-    min-height: 90vh;
+    min-height: 200vh;
 }
 
 .data-container-header{
@@ -236,8 +235,9 @@ main {
 }
 
 .item-container {
-    width: 46%;
-    margin: 10px 2%;
+    width: 47%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 60px;
     float: left;
     padding: 5px 12px;
@@ -245,6 +245,15 @@ main {
     -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
     -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
     box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+}
+
+.item-container:nth-child(odd) {
+    margin-right: 0;
+    margin-left: 2%;
+}
+
+.item-container:nth-child(even) {
+    margin-left: 2%;
 }
 
 .image {

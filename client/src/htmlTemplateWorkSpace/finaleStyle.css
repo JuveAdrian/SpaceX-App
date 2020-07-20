@@ -44,19 +44,13 @@ table {
 	border-spacing: 0;
 }
 
-body {
-    height: auto;
-}
-
 
 .app-container {
     width: auto;
     margin: 0;
     padding: 0;
     background-color: #f9fafe;
-    height: auto;
-    
-    bottom: -200px;
+    min-height: 600px;
 }
 
 nav{
@@ -218,8 +212,7 @@ main {
     width: 100%;
     background-color:#e5e5ec;
     padding-top: 20px;
-    height: 100%;
-    min-height: 90vh;
+    min-height: 79vh;
 }
 
 .data-container-header{
@@ -242,8 +235,9 @@ main {
 }
 
 .item-container {
-    width: 46%;
-    margin: 10px 2%;
+    width: 47%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 60px;
     float: left;
     padding: 5px 12px;
@@ -251,6 +245,15 @@ main {
     -webkit-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
     -moz-box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
     box-shadow: 1px 1px 5px 1px rgba(80,80,80,0.2);
+}
+
+.item-container:nth-child(odd) {
+    margin-right: 0;
+    margin-left: 2%;
+}
+
+.item-container:nth-child(even) {
+    margin-left: 2%;
 }
 
 .image {
@@ -388,7 +391,6 @@ main {
     width: auto;
     height: 96%;
     margin: 4% 2%;
-    padding-bottom: 30px;
     
     border-top: 1px solid #a8baf1;
 }
@@ -411,23 +413,28 @@ main {
     object-fit: cover;
 }
 
-
 /* Crew Page */
 
 .crewContainer {
     width: 96%;
     margin: 0 2%;
-    background-color: #2cb643;
-    height: 500px;
     padding-top: 10px;
+    height: 100%;
 }
 
+
+.crewMemberBox {
+    display: flex;
+    background-color: #fff;
+}
+
+
 .crewMember {
-    min-width: 49%;
+    width: 100%;
     margin-bottom: 10px;
     float: left;
-    height: 180px;
-    background-color: #5275e0;
+    min-height: 280px;
+    height: auto;
 }
 
 .crewMember:nth-child(even) {
@@ -438,10 +445,20 @@ main {
     margin-left: 0.5%;
 }
 
-.crewMember img {
-    width: 90%;
+.crewMember h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 28px;
+    padding-bottom: 20px;
+    color: #000;
 }
 
 .crewMember a {
-    font-size: 30px;
+    text-decoration: none;
+}
+
+.crewMember img {
+    width: 90%;
+    float: left;
+    margin-left: 5%;
 }
