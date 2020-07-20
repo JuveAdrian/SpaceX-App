@@ -23,6 +23,7 @@ class Crew extends React.Component {
                
                 <div className="crewContainer">
                 <ContentHeader state={{ pageName: this.state.pageName }} />
+                    <div className="crewMemberBox">
                     {this.state.crew.map( el => (
                         <div className="crewMember">
                             <Link to={{ 
@@ -37,10 +38,22 @@ class Crew extends React.Component {
                             }} >
                                 <h1>{ el.name }</h1>
                             </Link>
-                            <img src={el.image} alt={el.name} />
+                            <Link to={{ 
+                                pathname: `/member/${el.id}`,
+                                state: {
+                                    wikipedia: el.wikipedia,
+                                    agency: el.agency,
+                                    status: el.status,
+                                    image: el.image,
+                                    name: el.name
+                                } 
+                            }} >
+                                <img src={el.image} alt={el.name} />
+                            </Link>
                         </div>
                         
                     ))}
+                    </div>
                 </div>
                 
                 
