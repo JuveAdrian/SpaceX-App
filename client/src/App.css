@@ -212,7 +212,7 @@ main {
     width: 100%;
     background-color:#e5e5ec;
     padding-top: 20px;
-    min-height: 200vh;
+    min-height: 79vh;
 }
 
 .data-container-header{
@@ -461,4 +461,61 @@ main {
     width: 90%;
     float: left;
     margin-left: 5%;
+}
+
+/* Member Page */
+
+.crewSingleMember {
+    background-color: #fff;
+    width: 96%;
+    margin: 0 2%;
+    float: left;
+    padding-right: 40px;
+    
+    margin-bottom: 40px;
+}
+
+.crewSingleMember .photo {
+    width: 49.5%;
+    float: left;
+    margin-right: 1.5%;
+
+}
+
+.crewSingleMember .photo img{ 
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 40px;
+}
+
+.crewSingleMember .memberBio {
+    width: 49%;
+    background-color: blanchedalmond;
+    float: left;
+    padding: 40px 30px;
+    margin-top: 40px;
+}
+
+.crewSingleMember .memberBio h1 {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.crewSingleMember .memberBio p {
+    line-height: 22px;
+    text-align: justify;
+}
+
+.crewSingleMember .memberBio ul {
+    margin-top: 30px;
+}
+
+.crewSingleMember .memberBio li {
+    line-height: 30px;
+}
+
+.crewSingleMember .memberBio span {
+    font-weight: bold;
 }
