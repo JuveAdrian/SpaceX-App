@@ -212,7 +212,8 @@ main {
     width: 100%;
     background-color:#e5e5ec;
     padding-top: 20px;
-    min-height: 79vh;
+    height: auto;
+    display: flow-root;
 }
 
 .data-container-header{

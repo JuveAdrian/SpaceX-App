@@ -23,7 +23,7 @@ class App extends Component {
                     <Route exact path="/rockets" component={Rockets} />
                     <Route exact path="/crew" component={Crew} />
                     <Route path="/launche/:id" component={Launche} />
-                    <Route path="/member/" component={Member} />
+                    <Route path="/member/:id" component={Member} />
                     <Route exact path="/404" component={Page404} />
                     <Redirect to="/404" />
                 </Switch>
