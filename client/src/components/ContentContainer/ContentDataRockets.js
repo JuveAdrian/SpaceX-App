@@ -11,10 +11,15 @@ class ContentDataRockets extends React.Component {
                 <ContentHeader state={{ pageName: this.props.state.pageName }} />
                 <div className="rockets-list">
                     {this.props.state.rockets.map(el => (
-                        <div className="rocket-container">
-                            <h1>{el.name}</h1>
-                            <img src={el.flickr_images[0]} />
-                        </div>
+                        <Link to={{
+                                pathname: `/rockets/${el.id}`
+                        }}>
+                             <div className="rocket-container">
+                                <h1>{el.name}</h1>
+                                <img src={el.flickr_images[0]} />
+                            </div>
+                        </Link>
+                       
                         
                     ))}
                 </div>
