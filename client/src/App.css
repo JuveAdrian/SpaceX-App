@@ -520,3 +520,34 @@ main {
 .crewSingleMember .memberBio span {
     font-weight: bold;
 }
+
+/* Rockets Page */
+
+.rockets-list {
+    width: 96%;
+    margin: 0 2%;
+    margin-bottom: 40px;
+    background-color: #fff;
+    display: flex;
+}
+
+.rockets-list .rocket-container {
+    width: 24%;
+    margin: 2% 0.5%;
+    padding: 20px 10px;
+    border: 1px solid #a8baf1;
+}
+
+.rockets-list .rocket-container h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.rockets-list .rocket-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}

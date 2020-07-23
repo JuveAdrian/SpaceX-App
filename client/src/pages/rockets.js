@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Menu from '../components/Menu';
+import ContentDataRockets from '../components/ContentContainer/ContentDataRockets';
 
 class Rockets extends React.Component {
     state = {
@@ -13,12 +14,12 @@ class Rockets extends React.Component {
             .then(res => res.json())
             .then(json => this.setState({rockets : json}));
     }
-    
+
     render () {
         return (
             <div>
                 <Menu />
-                <h1>SpaceX Rockets</h1>
+                <ContentDataRockets state={{ pageName: this.state.pageName, rockets: this.state.rockets }} />
             </div>
         )
     }
