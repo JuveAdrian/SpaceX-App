@@ -529,13 +529,15 @@ main {
     margin-bottom: 40px;
     background-color: #fff;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .rockets-list .rocket-container {
-    width: 24%;
-    margin: 2% 0.5%;
+    width: 45%;
+    margin: 2% 2.5%;
     padding: 20px 10px;
     border: 1px solid #a8baf1;
+    float: left;
 }
 
 .rockets-list .rocket-container h1 {
@@ -546,7 +548,8 @@ main {
 }
 
 .rockets-list .rocket-container img {
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
     height: 500px;
     object-fit: cover;
     object-position: 50% 50%;
