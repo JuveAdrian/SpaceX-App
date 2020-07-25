@@ -16,7 +16,7 @@ class ContentDataRockets extends React.Component {
                         }}>
                              <div className="rocket-container">
                                 <h1>{el.name}</h1>
-                                <img src={el.flickr_images[0]} />
+                                <img src={el.flickr_images[0]} alt="" />
                             </div>
                         </Link>
                        

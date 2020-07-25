@@ -527,9 +527,8 @@ main {
     width: 96%;
     margin: 0 2%;
     margin-bottom: 40px;
+    display: flow-root;
     background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .rockets-list .rocket-container {
