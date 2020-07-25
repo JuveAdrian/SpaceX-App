@@ -212,7 +212,8 @@ main {
     width: 100%;
     background-color:#e5e5ec;
     padding-top: 20px;
-    min-height: 79vh;
+    height: auto;
+    display: flow-root;
 }
 
 .data-container-header{
@@ -499,7 +500,7 @@ main {
 .crewSingleMember .memberBio h1 {
     font-size: 24px;
     line-height: 24px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -518,4 +519,37 @@ main {
 
 .crewSingleMember .memberBio span {
     font-weight: bold;
+}
+
+/* Rockets Page */
+
+.rockets-list {
+    width: 96%;
+    margin: 0 2%;
+    margin-bottom: 40px;
+    display: flow-root;
+    background-color: #fff;
+}
+
+.rockets-list .rocket-container {
+    width: 45%;
+    margin: 2% 2.5%;
+    padding: 20px 10px;
+    float: left;
+    background-color: blanchedalmond;
+}
+
+.rockets-list .rocket-container h1 {
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.rockets-list .rocket-container img {
+    width: 90%;
+    margin: 20px 5%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
