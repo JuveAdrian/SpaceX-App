@@ -22,7 +22,7 @@ class Crew extends React.Component {
                 <Menu />
                 <main>
                     <div className="crewContainer">
-                    <ContentHeader state={{ pageName: this.state.pageName }} />
+                        <ContentHeader state={{ pageName: this.state.pageName }} />
                         <div className="crewMemberBox">
                         {this.state.crew.map( el => (
                             <div className="crewMember">
