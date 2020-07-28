@@ -14,7 +14,13 @@ class ContentDataRockets extends React.Component {
                         <Link to={{
                                 pathname: `/rocket/${el.id}`,
                                 state: {
-                                    name: el.name
+                                    name: el.name,
+                                    desc: el.description,
+                                    firstFlight: el.first_flight,
+                                    mass: el.mass.kg,
+                                    height: el.height,
+                                    wikiLink: el.wikipedia,
+                                    photos: el.flickr_images
                                 }
                         }}>
                              <div className="rocket-container">
