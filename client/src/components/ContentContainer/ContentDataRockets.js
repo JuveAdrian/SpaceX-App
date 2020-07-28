@@ -12,7 +12,10 @@ class ContentDataRockets extends React.Component {
                 <div className="rockets-list">
                     {this.props.state.rockets.map(el => (
                         <Link to={{
-                                pathname: `/rockets/${el.id}`
+                                pathname: `/rocket/${el.id}`,
+                                state: {
+                                    name: el.name
+                                }
                         }}>
                              <div className="rocket-container">
                                 <h1>{el.name}</h1>

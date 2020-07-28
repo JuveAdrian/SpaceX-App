@@ -4,7 +4,7 @@ class Rocket extends React.Component {
     render () {
         return (
             <div>
-                <h1>Rakieta</h1>
+                <h1>{ this.props.location.state.name }</h1>
             </div>
         )
     }
