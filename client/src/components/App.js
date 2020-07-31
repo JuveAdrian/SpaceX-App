@@ -13,6 +13,9 @@ import Member from '../pages/member';
 import Page404 from '../pages/404';
 import About from '../pages/about';
 
+
+import LaunchesNew from '../pages/launchesNew';
+
 class App extends Component {
     render () {
         return (
@@ -20,7 +23,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={HomePage} />
                     <Route exact path="/about" component={About} />
-                    <Route exact path="/launches" component={Launches} />
+                    <Route exact path="/launches" component={LaunchesNew} />
                     <Route exact path="/rockets" component={Rockets} />
                     <Route exact path="/crew" component={Crew} />
                     <Route path="/launche/:id" component={Launche} />
