@@ -5,8 +5,22 @@ import { Grid, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
     box: {
+        justifyContent: 'center'
+    },
+    nav: {
+        height: '80px'
+    },
+    logo: {
         backgroundColor: 'blue',
         spacing: '3'
+    },
+    main: {
+        justifyContent: 'center',
+        height: '1000px',
+        backgroundColor: 'green',
+    },
+    content: {
+        backgroundColor: 'red'
     }
 }) 
 
@@ -14,27 +28,15 @@ const LaunchesNew = ()  =>  {
 
         const classes = useStyles();
         return (
-            <Grid container xs={12} spacing={3} >
-                <Grid item xs={3} className={classes.box} spacing={2} style={{ gridColumnEnd: 'span 3' }} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
+            <Grid container xs={12} spacing={3} className={classes.box} >
+                <Grid item xs={12} className={classes.nav} container >
+                    <Grid item xs={3} className={classes.logo}>Logo</Grid>
+                    <Grid item xs={6}></Grid>
+                    <Grid item xs={3}>Search</Grid>
                 </Grid>
-                <Grid item xs={3} className={classes.box} spacing={2} style={{ gridColumnEnd: 'span 3' }} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
-                </Grid>
-                <Grid item xs={3} className={classes.box} spacing={2} style={{ gridColumnEnd: 'span 3' }} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
-                </Grid>
-                <Grid item xs={3} className={classes.box} spacing={2} style={{ gridColumnEnd: 'span 3' }} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
-                </Grid>
-                <Grid item xs={4} className={classes.box} spacing={3} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
-                </Grid>
-                <Grid item xs={4} className={classes.box} spacing={3} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
-                </Grid>
-                <Grid item xs={4} className={classes.box} spacing={3} >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo sed sapien cursus commodo. Suspendisse potenti. Nam tincidunt nibh nunc, sed tristique arcu lobortis tempor. Nam eleifend neque et ex mattis, ac pulvinar nisi vestibulum. Praesent vitae malesuada dolor. Praesent malesuada nunc vitae egestas molestie. Vivamus sit amet eros in felis consequat tristique eu fermentum lectus. Proin vehicula diam eget ipsum condimentum, ac ultricies mi aliquam. Mauris sem dui, posuere sed pharetra porttitor, lobortis sed ex. Nam mauris dui, rhoncus sit amet commodo vitae, hendrerit eu turpis. Nunc quis tortor ligula. In id risus nec turpis congue ornare ac nec metus. Nam posuere, lorem eu aliquam vestibulum, enim erat ultricies risus, placerat consequat neque ligula at dui. Morbi ut leo odio. Duis tincidunt cursus auctor.
+                <Grid item xs={10} className={classes.main} container>
+                    <Grid item xs={12} className={classes.content}>
+                    </Grid>
                 </Grid>
             </Grid>
         )
