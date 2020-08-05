@@ -39,7 +39,7 @@ const LaunchesNew = ()  =>  {
                     <Grid item xs={6}></Grid>
                     <Grid item xs={3}>Search</Grid>
                 </Grid>
-                <Grid item xs={10} className={classes.main} container>
+                <Grid item xs={12} md={10} className={classes.main} container>
                     <Grid item xs={12} className={classes.content} spacing={3} container>
                         <Grid item xs={12} sm={6} md={4}>
                             <Card className={classes.root} >
