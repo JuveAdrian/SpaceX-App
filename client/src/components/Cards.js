@@ -36,6 +36,10 @@ const useStyles = makeStyles({
     },
     content: {
         backgroundColor: 'red'
+    },
+    avatar: {
+        width: '70px',
+        height: '70px'
     }
 });
 
@@ -56,8 +60,8 @@ const Cards = () => {
                 <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            <img src="https://images2.imgbox.com/53/22/dh0XSLXO_o.png" width="50px" height="50px" />
+          <Avatar aria-label="recipe" className={classes.avatar} >
+            <img src="https://images2.imgbox.com/53/22/dh0XSLXO_o.png" width="70px" height="70px" />
           </Avatar>
         }
         action={
@@ -70,7 +74,7 @@ const Cards = () => {
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
+        image="https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg"
         title="Paella dish"
       />
       <CardContent>
