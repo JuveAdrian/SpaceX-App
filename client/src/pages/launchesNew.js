@@ -17,8 +17,7 @@ const useStyles = makeStyles({
         spacing: '3'
     },
     main: {
-        justifyContent: 'center',
-        backgroundColor: 'green'
+        justifyContent: 'center'
     },
     content: {
         backgroundColor: 'red'
