@@ -7,7 +7,8 @@ import Cards from '../components/Cards';
 
 const useStyles = makeStyles({
     box: {
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#263238'
     },
     nav: {
         height: '80px'
