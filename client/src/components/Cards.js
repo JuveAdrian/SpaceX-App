@@ -11,47 +11,21 @@ import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { shadows } from '@material-ui/system';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LinkIcon from '@material-ui/icons/Link';
 import { ThemeProvider } from '@material-ui/styles';
 
 
 import { createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
+import purple from '@material-ui/core/colors/purple';
 
 const theme = createMuiTheme({
-  overrides: {
-    // Style sheet name ⚛️
-    MuiButton: {
-      // Name of the rule
-      text: {
-        // Some CSS
-        color: 'white',
-      },
-    },
-    MuiCardHeader: {
-      subheader: {
-        color: '#b0bec5'
-      }
-    },
-    MuiCardActions: {
-        MuiButton: {
-          color: '#ffffff'
-        }
-    }
-  },
   palette: {
     primary: {
-      // Purple and green play nicely together.
-      main: '#123123',
+      main: purple[500],
     },
     secondary: {
-      // This is green.A700 as hex.
-      main: '#11cb5f',
+      main: '#f44336',
     },
   },
 });
@@ -110,7 +84,7 @@ const Cards = () => {
                   <CardHeader
                     avatar={
                       <Avatar aria-label="recipe" className={classes.avatar} >
-                        <img src="https://images2.imgbox.com/53/22/dh0XSLXO_o.png" width="70px" />
+                        <img src="https://images2.imgbox.com/53/22/dh0XSLXO_o.png" alt="foto" width="70px" />
                       </Avatar>
                     }
                     title="Shrimp and Chorizo Paella"
