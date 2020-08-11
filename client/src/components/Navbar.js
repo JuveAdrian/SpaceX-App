@@ -26,9 +26,9 @@ const Navbar = () => {
             <AppBar style={{background: '#222'}}>
                 <Toolbar>
                     <IconButton>
-                        <ArrowBack style={{ color: '#fff' }} />
+                        <ArrowBack style={{ color: '#455a64' }} />
                     </IconButton>
-                    <Typography variant="h5">
+                    <Typography variant="h5" style={{ color: "#ffffff" }}>
                         Launches
                     </Typography>
                 </Toolbar>
