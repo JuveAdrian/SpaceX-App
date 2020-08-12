@@ -1,4 +1,7 @@
 import React from 'react';
+
+import avatar from '../../src/nasa.png';
+
 import {
     AppBar,
     Toolbar,
@@ -22,6 +25,10 @@ import {
 
 const Navbar = () => {
     return (
+        <>
+        <Box component="div">
+            <Avatar src={avatar} alt="avatar" />
+        </Box>
         <Box component="nav">
             <AppBar style={{background: '#222'}}>
                 <Toolbar>
@@ -34,6 +41,7 @@ const Navbar = () => {
                 </Toolbar>
             </AppBar>
         </Box>
+        </>
     )
 }
 
