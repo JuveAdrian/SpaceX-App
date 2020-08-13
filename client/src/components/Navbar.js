@@ -19,23 +19,28 @@ import {
 } from "@material-ui/core";
 import {
    ArrowBack,
-   AssignmentInd,
+   Person,
    Home,
    Apps,
-   ContactMail 
+   Build,
+   Info 
 } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
     menuSliderContainer: {
         width: 250,
-        background: "#511",
+        background: "rgb(34, 34, 34)",
         height: "30rem"
     },
     avatar: {
         display: "block",
         margin: "0.5rem auto",
         width: theme.spacing(13),
-        height: theme.spacing(13)
+        height: theme.spacing(13),
+        paddingTop: "10px"
+    },
+    listItem: {
+        color: "#eceff1"
     }
 }));
 
@@ -45,19 +50,19 @@ const menuItems = [
         listText: "Home"
     },
     {
-        listIcon: <Home />,
+        listIcon: <Apps />,
         listText: "Launches"
     },
     {
-        listIcon: <Home />,
+        listIcon: <Build />,
         listText: "Rockets"
     },
     {
-        listIcon: <Home />,
+        listIcon: <Person />,
         listText: "Crew"
     },
     {
-        listIcon: <Home />,
+        listIcon: <Info />,
         listText: "About"
     }
 ]
@@ -71,13 +76,11 @@ const Navbar = () => {
             <Divider />
             <List>
                 {menuItems.map((lsItem, key) => ( 
-                <ListItem button>
-                    <ListItemIcon>
+                <ListItem button key={key}>
+                    <ListItemIcon className={ classes.listItem }>
                         {lsItem.listIcon}
                     </ListItemIcon>
-                    <ListItemText>
-                        {lsItem.listText}
-                    </ListItemText>
+                    <ListItemText className={ classes.listItem } primary={lsItem.listText} /> 
                 </ListItem>
                  )) }
             </List>
