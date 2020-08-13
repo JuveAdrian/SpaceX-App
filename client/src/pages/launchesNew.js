@@ -21,7 +21,7 @@ const useStyles = makeStyles({
         marginTop: '20px'
     },
     main: {
-        marginTop: '80px'
+        marginTop: '20px'
     }
 }) 
 
@@ -29,15 +29,17 @@ const LaunchesNew = ()  =>  {
 
         const classes = useStyles();
         return (
-            <Grid container xs={12} className={classes.box} >
+            <div>
                 <Navbar />
-                <Grid item xs={12} md={10} className={classes.main} container>
-                    <Cards />
+                <Grid container xs={12} className={classes.box} >
+                    <Grid item xs={12} md={10} className={classes.main} container>
+                        <Cards />
+                    </Grid>
+                    <Grid item xs={12} className={classes.footer} container>
+                        Adrian Grabkowski
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} className={classes.footer} container>
-                    Adrian Grabkowski
-                </Grid>
-            </Grid>
+            </div>
         )
     }
 
