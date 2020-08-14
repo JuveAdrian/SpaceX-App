@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 
@@ -30,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     menuSliderContainer: {
         width: 250,
         background: "rgb(34, 34, 34)",
-        height: "30rem"
+        height: "100%"
     },
     avatar: {
         display: "block",
@@ -47,23 +48,28 @@ const useStyles = makeStyles(theme => ({
 const menuItems = [
     {
         listIcon: <Home />,
-        listText: "Home"
+        listText: "Home",
+        listLink: "/"
     },
     {
         listIcon: <Apps />,
-        listText: "Launches"
+        listText: "Launches",
+        listLink: "/launches"
     },
     {
         listIcon: <Build />,
-        listText: "Rockets"
+        listText: "Rockets",
+        listLink: "/rockets"
     },
     {
         listIcon: <Person />,
-        listText: "Crew"
+        listText: "Crew",
+        listLink: "/crew"
     },
     {
         listIcon: <Info />,
-        listText: "About"
+        listText: "About",
+        listLink: "/about"
     }
 ]
 
@@ -79,7 +85,7 @@ const Navbar = () => {
     const classes = useStyles();
 
     const sideList = slider => (
-        <Box className={ classes.menuSliderContainer } component="div">
+        <Box className={ classes.menuSliderContainer } component="div" onClick={toogleSlider(slider, false)} >
             <Avatar className={classes.avatar} src={avatar} alt="avatar" />
             <Divider />
             <List>
@@ -88,7 +94,9 @@ const Navbar = () => {
                     <ListItemIcon className={ classes.listItem }>
                         {lsItem.listIcon}
                     </ListItemIcon>
-                    <ListItemText className={ classes.listItem } primary={lsItem.listText} /> 
+                    <Link to={lsItem.listLink}>
+                        <ListItemText className={ classes.listItem } primary={lsItem.listText} />
+                    </Link> 
                 </ListItem>
                  )) }
             </List>
@@ -108,7 +116,10 @@ const Navbar = () => {
                         Launches
                     </Typography>
                     <MobilRightMenuSlider 
-                        open={state.right}>
+                        anchor="right"
+                        open={state.right}
+                        onClose={toogleSlider("right", false)}
+                        >
                         {sideList("right")}
                     </MobilRightMenuSlider>
                 </Toolbar>

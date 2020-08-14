@@ -77,8 +77,8 @@ const Cards = () => {
       
         <Grid item xs={12} className={classes.content} spacing={3} container>
 
-            { [1,2,3,4,5,6,7,8,9].map(() => (
-              <ThemeProvider theme={theme}>
+            { [1,2,3,4,5,6,7,8,9].map((id) => (
+              <ThemeProvider theme={theme} id={id}>
               <Grid item xs={12} sm={6} md={4}>
                 <Card className={classes.root}>
                   <CardHeader
