@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import MobilRightMenuSlider from '@material-ui/core/Drawer';
 
 import avatar from '../../src/nasa.png';
-
-import { makeStyles } from '@material-ui/core/styles';
 import {
     AppBar,
     Toolbar,
@@ -68,9 +68,17 @@ const menuItems = [
 ]
 
 const Navbar = () => {
+    const [state, setState] = useState({
+        right: false
+    })
+
+    const toogleSlider = (slider, open) => () => {
+        setState({ ...state, [slider]: open });
+    }
+
     const classes = useStyles();
-    return (
-        <>
+
+    const sideList = slider => (
         <Box className={ classes.menuSliderContainer } component="div">
             <Avatar className={classes.avatar} src={avatar} alt="avatar" />
             <Divider />
@@ -85,15 +93,24 @@ const Navbar = () => {
                  )) }
             </List>
         </Box>
+    );
+
+    return (
+        <>
+        
         <Box component="nav" >
             <AppBar position="sticky" style={{background: '#222'}}>
                 <Toolbar>
-                    <IconButton>
+                    <IconButton onClick={toogleSlider("right", true)}>
                         <ArrowBack style={{ color: '#455a64' }} />
                     </IconButton>
                     <Typography variant="h5" style={{ color: "#ffffff" }}>
                         Launches
                     </Typography>
+                    <MobilRightMenuSlider 
+                        open={state.right}>
+                        {sideList("right")}
+                    </MobilRightMenuSlider>
                 </Toolbar>
             </AppBar>
         </Box>
