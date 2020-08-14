@@ -4,7 +4,6 @@ import { Grid, makeStyles } from '@material-ui/core';
 
 import Cards from '../components/Cards';
 import Navbar from '../components/Navbar';
-import Header from '../components/Header';
 
 
 const useStyles = makeStyles({

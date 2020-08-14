@@ -104,8 +104,6 @@ const Navbar = () => {
     );
 
     return (
-        <>
-        
         <Box component="nav" >
             <AppBar position="sticky" style={{background: '#222'}}>
                 <Toolbar>
@@ -125,7 +123,6 @@ const Navbar = () => {
                 </Toolbar>
             </AppBar>
         </Box>
-        </>
     )
 }
 
