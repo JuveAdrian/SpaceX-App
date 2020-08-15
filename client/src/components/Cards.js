@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Grid, makeStyles } from '@material-ui/core';
 import clsx from 'clsx';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -61,89 +62,110 @@ const useStyles = makeStyles({
     },
     secondHeader: {
       color: '#eceff1'
+    },
+    readMoreBtn: {
+      color: '#fff',
+      backgroundColor: '#37474f',
+      justifyContent: 'center'
     }
 });
 
 
 const Cards = () => {
-      const classes = useStyles();
-      const [expanded, setExpanded] = React.useState(false);
+    const classes = useStyles();
+    const [expanded, setExpanded] = React.useState(false);
 
-            const handleExpandClick = () => {
-                setExpanded(!expanded);
-            };
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
+
+    const launchesList = [
+      {
+        id: 1,
+        patch: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
+        title: 'FalconSat',
+        date: '2006-03-24T22:30:00.000Z',
+        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
+        details: 'Engine failure at 33 seconds and loss of vehicle',
+        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
+      },
+      {
+        id: 2,
+        patch: 'https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png',
+        title: 'DemoSat',
+        date: '2006-03-24T22:30:00.000Z',
+        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
+        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
+        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
+      },
+      {
+        id: 3,
+        patch: 'https://images2.imgbox.com/e9/c9/T8CfiSYb_o.png',
+        title: 'RatSat',
+        date: '2006-03-24T22:30:00.000Z',
+        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
+        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
+        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
+      },
+      {
+        id: 4,
+        patch: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
+        title: 'FalconSat',
+        date: '2006-03-24T22:30:00.000Z',
+        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
+        details: 'Engine failure at 33 seconds and loss of vehicle',
+        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
+      },
+      {
+        id: 5,
+        patch: 'https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png',
+        title: 'DemoSat',
+        date: '2006-03-24T22:30:00.000Z',
+        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
+        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage. Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
+        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
+      },
+      {
+        id: 6,
+        patch: 'https://images2.imgbox.com/e9/c9/T8CfiSYb_o.png',
+        title: 'RatSat',
+        date: '2006-03-24T22:30:00.000Z',
+        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
+        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
+        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
+      }
+    ]
 
     return (
       
         <Grid item xs={12} className={classes.content} spacing={3} container>
 
-            { [1,2,3,4,5,6,7,8,9].map((id) => (
+            { launchesList.map((item, id) => (
               <ThemeProvider theme={theme} id={id}>
               <Grid item xs={12} sm={6} md={4}>
                 <Card className={classes.root}>
                   <CardHeader
                     avatar={
                       <Avatar aria-label="recipe" className={classes.avatar} >
-                        <img src="https://images2.imgbox.com/53/22/dh0XSLXO_o.png" alt="foto" width="70px" />
+                        <img src={item.patch} alt="foto" width="70px" />
                       </Avatar>
                     }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
+                    title={item.title}
+                    subheader={item.date}
                   />
                   <CardMedia
                     className={classes.media}
-                    image="https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg"
+                    image={item.img}
                     title="Paella dish"
                   />
                   <CardContent>
-                    <Typography variant="body2" color="#eceff1" component="p">
-                      This impressive paella is a perfect party dish and a fun meal to cook together with your
-                      guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                    <Typography variant="body2" color="#eceff1" component="p" style={{ height: '60px' }}>
+                      {item.details}
                     </Typography>
                   </CardContent>
-                  <CardActions disableSpacing>
-                    <IconButton aria-label="wikipedia">
-                      <LinkIcon />
-                    </IconButton>
-                    
-                    <IconButton
-                      className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
-                      })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                    >
-                      <ExpandMoreIcon />
-                    </IconButton>
+                  <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>
+                    <Button children={'Read more'} href={'https://google.pl'} className={classes.readMoreBtn} />
                   </CardActions>
-                  <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                      <Typography paragraph>Method:</Typography>
-                      <Typography paragraph>
-                        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                        minutes.
-                      </Typography>
-                      <Typography paragraph>
-                        Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-                        heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-                        browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-                        and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-                        pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-                        saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                      </Typography>
-                      <Typography paragraph>
-                        Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-                        without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-                        medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-                        again without stirring, until mussels have opened and rice is just tender, 5 to 7
-                        minutes more. (Discard any mussels that don’t open.)
-                      </Typography>
-                      <Typography>
-                        Set aside off of the heat to let rest for 10 minutes, and then serve.
-                      </Typography>
-                    </CardContent>
-                  </Collapse>
                 </Card>
               </Grid>
               </ThemeProvider>
