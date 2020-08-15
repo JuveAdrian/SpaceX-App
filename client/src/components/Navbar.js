@@ -73,7 +73,7 @@ const menuItems = [
     }
 ]
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [state, setState] = useState({
         right: false
     })
@@ -86,7 +86,9 @@ const Navbar = () => {
 
     const sideList = slider => (
         <Box className={ classes.menuSliderContainer } component="div" onClick={toogleSlider(slider, false)} >
-            <Avatar className={classes.avatar} src={avatar} alt="avatar" />
+            <Link to='/'>
+                <Avatar className={classes.avatar} src={avatar} alt="avatar" />
+            </Link>
             <Divider />
             <List>
                 {menuItems.map((lsItem, key) => ( 
@@ -111,7 +113,7 @@ const Navbar = () => {
                         <ArrowBack style={{ color: '#455a64' }} />
                     </IconButton>
                     <Typography variant="h5" style={{ color: "#ffffff" }}>
-                        Launches
+                        {props.pageName}
                     </Typography>
                     <MobilRightMenuSlider 
                         anchor="right"

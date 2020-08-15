@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Menu from '../components/Menu';
+import Navbar from '../components/Navbar';
 import ContentHeader from '../components/ContentContainer/ContentHeader';
 
 class Crew extends React.Component {
@@ -19,7 +20,7 @@ class Crew extends React.Component {
     render () {
         return (
             <div>
-                <Menu />
+                <Navbar pageName={'Crew'} />
                 <main>
                     <div className="crewContainer">
                         <ContentHeader state={{ pageName: this.state.pageName }} />

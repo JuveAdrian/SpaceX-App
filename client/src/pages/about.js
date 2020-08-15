@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Menu from '../components/Menu';
+import Navbar from '../components/Navbar';
 
 class About extends React.Component {
     render() {
         return (
             <div>
-                <Menu />
+                <Navbar pageName={'About'} />
                 <main></main>
             </div>
         )

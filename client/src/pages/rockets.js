@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Menu from '../components/Menu';
+import Navbar from '../components/Navbar';
 import ContentDataRockets from '../components/ContentContainer/ContentDataRockets';
 
 class Rockets extends React.Component {
@@ -18,7 +18,7 @@ class Rockets extends React.Component {
     render () {
         return (
             <div>
-                <Menu />
+                <Navbar pageName={'Rockets'} />
                 <ContentDataRockets state={{ pageName: this.state.pageName, rockets: this.state.rockets }} />
             </div>
         )
