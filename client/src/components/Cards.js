@@ -42,8 +42,9 @@ const useStyles = makeStyles({
     content: {
     },
     avatar: {
-        width: '70px',
-        height: '70px'
+        width: '80px',
+        height: '80px',
+        backgroundColor: 'rgba(0,0,0,0.0)'
     },
     media: {
       height: '210px'

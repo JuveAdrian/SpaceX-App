@@ -4,7 +4,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 
 import Cards from '../components/Cards';
 import Navbar from '../components/Navbar';
-
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles({
     box: {
@@ -13,12 +13,6 @@ const useStyles = makeStyles({
     },  
     content: {
         backgroundColor: 'red'
-    },
-    footer: {
-        backgroundColor: 'green',
-        justifyContent: 'center',
-        alignSelf: 'flex-end',
-        marginTop: '20px'
     },
     main: {
         marginTop: '20px'
@@ -35,9 +29,7 @@ const LaunchesNew = ()  =>  {
                     <Grid item xs={12} md={10} className={classes.main} container>
                         <Cards />
                     </Grid>
-                    <Grid item xs={12} className={classes.footer} container>
-                        Adrian Grabkowski
-                    </Grid>
+                    <Footer />
                 </Grid>
             </div>
         )
