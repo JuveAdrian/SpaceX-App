@@ -1,13 +1,14 @@
 import React from 'react';
 
-import Menu from '../components/Menu';
+import Navbar from '../components/Navbar';
 import ContentHeader from '../components/ContentContainer/ContentHeader';
+import Footer from '../components/Footer';
 
 class Rocket extends React.Component {
     render () {
         return (
             <div>
-                <Menu />
+                <Navbar />
                 <main>
                     <ContentHeader state={{ pageName: this.props.location.state.name }}/>
                     <div className="rockets-list">
@@ -21,6 +22,7 @@ class Rocket extends React.Component {
                         </ul>
                     </div>
                 </main>
+                <Footer />
             </div>
         )
     }

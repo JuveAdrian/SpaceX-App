@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Menu from '../components/Menu';
 import Navbar from '../components/Navbar';
 import ContentHeader from '../components/ContentContainer/ContentHeader';
+import Footer from '../components/Footer';
 
 class Crew extends React.Component {
     state = {
@@ -56,6 +56,7 @@ class Crew extends React.Component {
                         </div>
                     </div>
                 </main>
+                <Footer />
             </div>
         )
     }

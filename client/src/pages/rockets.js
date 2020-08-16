@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navbar from '../components/Navbar';
 import ContentDataRockets from '../components/ContentContainer/ContentDataRockets';
+import Footer from '../components/Footer'
 
 class Rockets extends React.Component {
     state = {
@@ -20,6 +21,7 @@ class Rockets extends React.Component {
             <div>
                 <Navbar pageName={'Rockets'} />
                 <ContentDataRockets state={{ pageName: this.state.pageName, rockets: this.state.rockets }} />
+                <Footer />
             </div>
         )
     }
