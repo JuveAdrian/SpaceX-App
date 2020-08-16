@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Menu from '../components/Menu';
 import ContentHeader from '../components/ContentContainer/ContentHeader';
 
 class Member extends React.Component {
@@ -13,7 +12,6 @@ class Member extends React.Component {
     render () {
         return (
             <div>
-                <Menu />
                 <main>
                     <ContentHeader state={{ pageName: this.props.location.state.name }}/>
                     <div className="crewSingleMember">

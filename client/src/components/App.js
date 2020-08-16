@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 //Pages
 import HomePage from '../pages/index';
-import Launches from '../pages/launches';
 import Launche from '../pages/launche';
 import Rockets from '../pages/rockets';
 import Rocket from '../pages/rocket';

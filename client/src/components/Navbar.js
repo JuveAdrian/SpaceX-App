@@ -14,7 +14,6 @@ import {
     Avatar,
     Divider,
     List,
-    Typografy,
     Box,
     Typography
 } from "@material-ui/core";

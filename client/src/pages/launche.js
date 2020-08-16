@@ -1,8 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 
-import Menu from '../components/Menu';
-
 class Launche extends React.Component {
     state = {
         launchpadId: this.props.location.state.launchpad,
@@ -37,7 +35,6 @@ class Launche extends React.Component {
     render() {
         return (
             <div>
-                <Menu />
                 <main>
                     <div className="data-container-header">
                         <h1>{this.props.location.state.name}</h1>

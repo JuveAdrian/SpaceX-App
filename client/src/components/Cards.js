@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import { Grid, makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
@@ -70,11 +71,6 @@ const useStyles = makeStyles({
 
 const Cards = () => {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
 
     const launchesList = [
       {
@@ -149,7 +145,7 @@ const Cards = () => {
                     }
                     style={{ fontSize: '40px' }}
                     title={item.title}
-                    subheader={item.date}
+                    subheader={moment(item.date).format('MMMM D, YYYY')}
                   />
                   <CardMedia
                     className={classes.media}
@@ -157,8 +153,8 @@ const Cards = () => {
                     title={item.title}
                   />
                   <CardContent>
-                    <Typography variant="body2" color="#eceff1" component="p" style={{ height: '60px' }}>
-                      {item.details}
+                    <Typography variant="body2" color="#eceff1" component="p" style={{ minHeight: '60px' }}>
+                      {item.details.slice(0, 170) + '...'}
                     </Typography>
                   </CardContent>
                   <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>

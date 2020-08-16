@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Menu from '../components/Menu';
 import ContentData from '../components/ContentContainer/ContentData';
 
 class Launches extends React.Component {
@@ -18,7 +17,6 @@ class Launches extends React.Component {
     render () {
         return (
             <div>
-                <Menu />
                 <ContentData state={{ pageName: this.state.pageName, launches: this.state.launches }} />
             </div>
             
