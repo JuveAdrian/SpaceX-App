@@ -7,12 +7,9 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider } from '@material-ui/styles';
-
-
 import { createMuiTheme } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 
@@ -26,7 +23,6 @@ const theme = createMuiTheme({
     },
   }
 });
-
 
 const useStyles = makeStyles({
     box: {
@@ -70,7 +66,6 @@ const useStyles = makeStyles({
       }
     }
 });
-
 
 const Cards = () => {
     const classes = useStyles();
