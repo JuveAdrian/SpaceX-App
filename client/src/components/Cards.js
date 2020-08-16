@@ -1,19 +1,15 @@
 import React from 'react';
 
 import { Grid, makeStyles } from '@material-ui/core';
-import clsx from 'clsx';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
+
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import LinkIcon from '@material-ui/icons/Link';
 import { ThemeProvider } from '@material-ui/styles';
 
 
@@ -28,7 +24,7 @@ const theme = createMuiTheme({
     secondary: {
       main: '#f44336',
     },
-  },
+  }
 });
 
 
@@ -65,8 +61,13 @@ const useStyles = makeStyles({
     },
     readMoreBtn: {
       color: '#fff',
-      backgroundColor: '#37474f',
-      justifyContent: 'center'
+      backgroundColor: '#2196f3',
+      padding: '10px 14px',
+      marginBottom: '14px',
+      justifyContent: 'center',
+      "&:hover" : {
+        backgroundColor: '#1769aa'
+      }
     }
 });
 
@@ -150,13 +151,14 @@ const Cards = () => {
                         <img src={item.patch} alt="foto" width="70px" />
                       </Avatar>
                     }
+                    style={{ fontSize: '40px' }}
                     title={item.title}
                     subheader={item.date}
                   />
                   <CardMedia
                     className={classes.media}
                     image={item.img}
-                    title="Paella dish"
+                    title={item.title}
                   />
                   <CardContent>
                     <Typography variant="body2" color="#eceff1" component="p" style={{ height: '60px' }}>
@@ -164,7 +166,7 @@ const Cards = () => {
                     </Typography>
                   </CardContent>
                   <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>
-                    <Button children={'Read more'} href={'https://google.pl'} className={classes.readMoreBtn} />
+                    <Button children={'Read more'} href={'/launche/5eb87d42ffd86e000604b384'} className={classes.readMoreBtn} />
                   </CardActions>
                 </Card>
               </Grid>
