@@ -16,7 +16,7 @@ import {
     List,
     Box,
     Typography
-} from "@material-ui/core";
+} from '@material-ui/core';
 import {
    ArrowBack,
    Person,
@@ -24,51 +24,51 @@ import {
    Apps,
    Build,
    Info 
-} from "@material-ui/icons";
+} from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
     menuSliderContainer: {
         width: 250,
-        background: "rgb(34, 34, 34)",
-        height: "100%"
+        background: 'rgb(34, 34, 34)',
+        height: '100%'
     },
     avatar: {
-        display: "block",
-        margin: "0.5rem auto",
+        display: 'block',
+        margin: '0.5rem auto',
         width: theme.spacing(13),
         height: theme.spacing(13),
-        paddingTop: "10px"
+        paddingTop: '10px'
     },
     listItem: {
-        color: "#eceff1"
+        color: '#eceff1'
     }
 }));
 
 const menuItems = [
     {
         listIcon: <Home />,
-        listText: "Home",
-        listLink: "/"
+        listText: 'Home',
+        listLink: '/'
     },
     {
         listIcon: <Apps />,
-        listText: "Launches",
-        listLink: "/launches"
+        listText: 'Launches',
+        listLink: '/launches'
     },
     {
         listIcon: <Build />,
-        listText: "Rockets",
-        listLink: "/rockets"
+        listText: 'Rockets',
+        listLink: '/rockets'
     },
     {
         listIcon: <Person />,
-        listText: "Crew",
-        listLink: "/crew"
+        listText: 'Crew',
+        listLink: '/crew'
     },
     {
         listIcon: <Info />,
-        listText: "About",
-        listLink: "/about"
+        listText: 'About',
+        listLink: '/about'
     }
 ]
 

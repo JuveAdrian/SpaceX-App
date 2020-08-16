@@ -12,7 +12,6 @@ import Member from '../pages/member';
 import Page404 from '../pages/404';
 import About from '../pages/about';
 
-
 import LaunchesNew from '../pages/launchesNew';
 
 class App extends Component {

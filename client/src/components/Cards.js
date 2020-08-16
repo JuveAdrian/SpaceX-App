@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
+
 import { Grid, makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -69,71 +70,15 @@ const useStyles = makeStyles({
     }
 });
 
-const Cards = () => {
+const Cards = (props) => {
     const classes = useStyles();
 
-    const launchesList = [
-      {
-        id: 1,
-        patch: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
-        title: 'FalconSat',
-        date: '2006-03-24T22:30:00.000Z',
-        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
-        details: 'Engine failure at 33 seconds and loss of vehicle',
-        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
-      },
-      {
-        id: 2,
-        patch: 'https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png',
-        title: 'DemoSat',
-        date: '2006-03-24T22:30:00.000Z',
-        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
-        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
-        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
-      },
-      {
-        id: 3,
-        patch: 'https://images2.imgbox.com/e9/c9/T8CfiSYb_o.png',
-        title: 'RatSat',
-        date: '2006-03-24T22:30:00.000Z',
-        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
-        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
-        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
-      },
-      {
-        id: 4,
-        patch: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
-        title: 'FalconSat',
-        date: '2006-03-24T22:30:00.000Z',
-        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
-        details: 'Engine failure at 33 seconds and loss of vehicle',
-        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
-      },
-      {
-        id: 5,
-        patch: 'https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png',
-        title: 'DemoSat',
-        date: '2006-03-24T22:30:00.000Z',
-        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
-        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage. Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
-        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
-      },
-      {
-        id: 6,
-        patch: 'https://images2.imgbox.com/e9/c9/T8CfiSYb_o.png',
-        title: 'RatSat',
-        date: '2006-03-24T22:30:00.000Z',
-        img: 'https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg',
-        details: 'Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage',
-        wiki: 'https://en.wikipedia.org/wiki/SpaceX_CRS-20'
-      }
-    ]
-
+    console.log(props);
     return (
       
         <Grid item xs={12} className={classes.content} spacing={3} container>
 
-            { launchesList.map((item, id) => (
+            { props.state.launches.map((item, id) => (
               <ThemeProvider theme={theme} id={id}>
               <Grid item xs={12} sm={6} md={4}>
                 <Card className={classes.root}>
