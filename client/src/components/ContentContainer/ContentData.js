@@ -19,7 +19,7 @@ import purple from '@material-ui/core/colors/purple';
 
 import { Link } from 'react-router-dom';
 
-import ContentHeader from '../ContentContainer/ContentHeader';
+import imageSpacex from '../../spaceX.jpg';
 
 
 const theme = createMuiTheme({
@@ -49,6 +49,7 @@ const theme = createMuiTheme({
           justifyContent: 'center'
       },
       content: {
+        marginTop: '20px'
       },
       avatar: {
           width: '80px',
@@ -116,12 +117,13 @@ class ContentData extends React.Component {
                                 />
                                 <CardMedia
                                     className={classes.media}
-                                    image={el.links.flickr.original[0]}
+                                    image={ el.links.flickr.original.length !== 0 ? el.links.flickr.original[0] : imageSpacex }
                                     title={el.title}
+                                    
                                 />
                                 <CardContent>
                                     <Typography variant="body2" color="#eceff1" component="p" style={{ minHeight: '60px' }}>
-                                    {el.details}
+                                    { el.details !== null ? el.details.slice(0, 80) + '...' : 'No description for this launche' }
                                     </Typography>
                                 </CardContent>
                                 <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>

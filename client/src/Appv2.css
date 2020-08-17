@@ -6,3 +6,8 @@
 .MuiCardHeader-title {
     color: 'green'
 }
+
+.MuiGrid-container {
+    background-color: #263238;
+    justify-content: center;
+}
