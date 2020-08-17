@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import moment from 'moment';
-import { withStyles } from '@material-ui/core/styles';
 
-import { Grid, makeStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -16,11 +17,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 
-
-import { Link } from 'react-router-dom';
-
 import imageSpacex from '../../spaceX.jpg';
-
 
 const theme = createMuiTheme({
     palette: {
@@ -79,67 +76,61 @@ const theme = createMuiTheme({
   });
 
 class ContentData extends React.Component {
-    
-    
-    render () {
-        const { classes } = this.props;
-        return (
-            <main>
-            <Grid item xs={12} className={classes.content} spacing={3} container>
-                    {this.props.state.launches.map(el => (
+  render () {
+    const { classes } = this.props;
+    return (
+      <main>
+        <Grid item xs={12} className={classes.content} spacing={3} container>
+          {this.props.state.launches.map(el => (
+            <ThemeProvider theme={theme}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.root}>
+                <CardHeader
+                  avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar} >
+                  <Link to={{ 
+                    pathname: `/launche/${el.id}`, 
+                    state: { 
+                      name: el.name,
+                      img: el.links.patch.small,
+                      gallery: el.links.flickr.original,
+                      success: el.success,
+                      details: el.details,
+                      date: el.date_utc,
+                      launchpad: el.launchpad,
+                      rocket: el.rocket }
+                  }}>
+                      <img src={el.links.patch.small} alt="foto" width="70px" />
+                  </Link>
+                      
+                  </Avatar>
+                  }
+                  style={{ fontSize: '40px' }}
+                  title={el.name}
+                  subheader={moment(el.date).format('MMMM D, YYYY')}
+                />
+                <CardMedia
+                  className={classes.media}
+                  image={ el.links.flickr.original.length !== 0 ? el.links.flickr.original[0] : imageSpacex }
+                  title={el.title}
                     
-                        <ThemeProvider theme={theme}>
-                            <Grid item xs={12} sm={6} md={4}>
-                                <Card className={classes.root}>
-                                <CardHeader
-                                    avatar={
-                                    <Avatar aria-label="recipe" className={classes.avatar} >
-                                    <Link to={{ 
-                                        pathname: `/launche/${el.id}`, 
-                                        state: { 
-                                            name: el.name,
-                                            img: el.links.patch.small,
-                                            gallery: el.links.flickr.original,
-                                            success: el.success,
-                                            details: el.details,
-                                            date: el.date_utc,
-                                            launchpad: el.launchpad,
-                                            rocket: el.rocket }
-                                    }}>
-                                        <img src={el.links.patch.small} alt="foto" width="70px" />
-                                    </Link>
-                                       
-                                    </Avatar>
-                                    }
-                                    style={{ fontSize: '40px' }}
-                                    title={el.name}
-                                    subheader={moment(el.date).format('MMMM D, YYYY')}
-                                />
-                                <CardMedia
-                                    className={classes.media}
-                                    image={ el.links.flickr.original.length !== 0 ? el.links.flickr.original[0] : imageSpacex }
-                                    title={el.title}
-                                    
-                                />
-                                <CardContent>
-                                    <Typography variant="body2" color="#eceff1" component="p" style={{ minHeight: '60px' }}>
-                                    { el.details !== null ? el.details.slice(0, 80) + '...' : 'No description for this launche' }
-                                    </Typography>
-                                </CardContent>
-                                <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>
-                                    <Button children={'Read more'} href={'/launche/5eb87d42ffd86e000604b384'} className={classes.readMoreBtn} />
-                                </CardActions>
-                                </Card>
-                            </Grid>
-                            </ThemeProvider>
-                    
-                    
-                   
-                ))}
-            </Grid>
-                
-            </main>
-        )
-    }
+                />
+                <CardContent>
+                  <Typography variant="body2" color="#eceff1" component="p" style={{ minHeight: '60px' }}>
+                    { el.details !== null ? el.details.slice(0, 80) + '...' : 'No description for this launche' }
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>
+                  <Button children={'Read more'} href={'/launche/5eb87d42ffd86e000604b384'} className={classes.readMoreBtn} />
+                </CardActions>
+                </Card>
+              </Grid>
+            </ThemeProvider>
+          ))}
+        </Grid>
+      </main>
+    )
+  }
 }
+
 export default withStyles(useStyles)(ContentData);

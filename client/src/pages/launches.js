@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 import { Grid, Box, makeStyles } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-
 const useStyles = theme => makeStyles({
     box: {
         justifyContent: 'center',
@@ -20,8 +19,6 @@ const useStyles = theme => makeStyles({
         marginTop: '50px'
     }
 });
-
-
 
 class Launches extends React.Component {
     state = {
