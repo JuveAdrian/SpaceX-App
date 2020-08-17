@@ -87,7 +87,7 @@ class ContentData extends React.Component {
             <Grid item xs={12} className={classes.content} spacing={3} container>
                     {this.props.state.launches.map(el => (
                     
-                        <ThemeProvider theme={theme} id={el.id}>
+                        <ThemeProvider theme={theme}>
                             <Grid item xs={12} sm={6} md={4}>
                                 <Card className={classes.root}>
                                 <CardHeader
@@ -140,4 +140,4 @@ class ContentData extends React.Component {
         )
     }
 }
-export default withStyles(useStyles)(ContentData)
+export default withStyles(useStyles)(ContentData);

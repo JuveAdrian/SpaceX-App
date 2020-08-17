@@ -2,6 +2,26 @@ import React from 'react';
 
 import ContentData from '../components/ContentContainer/ContentData';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+import { Grid, makeStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+
+
+const useStyles = theme => makeStyles({
+    box: {
+        justifyContent: 'center',
+        backgroundColor: '#263238'
+    },  
+    content: {
+        backgroundColor: 'red'
+    },
+    main: {
+        marginTop: '20px'
+    }
+});
+
+
 
 class Launches extends React.Component {
     state = {
@@ -16,14 +36,20 @@ class Launches extends React.Component {
     }
 
     render () {
+        const { classes } = this.props;
         return (
             <div>
                 <Navbar />
-                <ContentData state={{ pageName: this.state.pageName, launches: this.state.launches }} />
+                <Grid container xs={12} className={classes.box} >
+                    <Grid item xs={12} md={10} className={classes.main} container>
+                        <ContentData state={{ pageName: this.state.pageName, launches: this.state.launches }} />
+                    </Grid>
+                <Footer />
+            </Grid>
             </div>
             
         )
     }
 }
 
-export default Launches;
+export default withStyles(useStyles)(Launches);
