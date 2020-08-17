@@ -85,56 +85,54 @@ class ContentData extends React.Component {
         return (
             <main>
             <Grid item xs={12} className={classes.content} spacing={3} container>
-                <ContentHeader state={{ pageName: this.props.state.pageName }} />
                     {this.props.state.launches.map(el => (
-                    <div className="item-container" key="el.id">
-                        <div className="image">
-                        <Link to={{ 
-                                pathname: `/launche/${el.id}`, 
-                                state: { 
-                                    name: el.name,
-                                    img: el.links.patch.small,
-                                    gallery: el.links.flickr.original,
-                                    success: el.success,
-                                    details: el.details,
-                                    date: el.date_utc,
-                                    launchpad: el.launchpad,
-                                    rocket: el.rocket }
-                            }}>
-                                <img src={el.links.patch.small} alt="" />
-                            </Link>
-                        </div>
-                        <div className="describe">
-                            <Link to={{ 
-                                    pathname: `/launche/${el.id}`, 
-                                    state: { 
-                                        name: el.name,
-                                        img: el.links.patch.small,
-                                        gallery: el.links.flickr.original,
-                                        success: el.success,
-                                        details: el.details,
-                                        date: el.date_utc,
-                                        launchpad: el.launchpad,
-                                        rocket: el.rocket }
-                                }}><h1 className="name">{el.name}</h1>
-                            </Link>
-                            <Link to={{ 
-                                pathname: `/launche/${el.id}`, 
-                                state: { 
-                                    name: el.name,
-                                    img: el.links.patch.small,
-                                    gallery: el.links.flickr.original,
-                                    success: el.success,
-                                    details: el.details,
-                                    date: el.date_utc,
-                                    launchpad: el.launchpad,
-                                    rocket: el.rocket }
-                            }}>
-                                <button>Read More</button>
-                            </Link>
-                        <span>{el.date}</span>
-                    </div>
-                </div>
+                    
+                        <ThemeProvider theme={theme} id={el.id}>
+                            <Grid item xs={12} sm={6} md={4}>
+                                <Card className={classes.root}>
+                                <CardHeader
+                                    avatar={
+                                    <Avatar aria-label="recipe" className={classes.avatar} >
+                                    <Link to={{ 
+                                        pathname: `/launche/${el.id}`, 
+                                        state: { 
+                                            name: el.name,
+                                            img: el.links.patch.small,
+                                            gallery: el.links.flickr.original,
+                                            success: el.success,
+                                            details: el.details,
+                                            date: el.date_utc,
+                                            launchpad: el.launchpad,
+                                            rocket: el.rocket }
+                                    }}>
+                                        <img src={el.links.patch.small} alt="foto" width="70px" />
+                                    </Link>
+                                       
+                                    </Avatar>
+                                    }
+                                    style={{ fontSize: '40px' }}
+                                    title={el.name}
+                                    subheader={moment(el.date).format('MMMM D, YYYY')}
+                                />
+                                <CardMedia
+                                    className={classes.media}
+                                    image={el.links.flickr.original[0]}
+                                    title={el.title}
+                                />
+                                <CardContent>
+                                    <Typography variant="body2" color="#eceff1" component="p" style={{ minHeight: '60px' }}>
+                                    {el.details}
+                                    </Typography>
+                                </CardContent>
+                                <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>
+                                    <Button children={'Read more'} href={'/launche/5eb87d42ffd86e000604b384'} className={classes.readMoreBtn} />
+                                </CardActions>
+                                </Card>
+                            </Grid>
+                            </ThemeProvider>
+                    
+                    
+                   
                 ))}
             </Grid>
                 
