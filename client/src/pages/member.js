@@ -10,6 +10,7 @@ class Member extends React.Component {
 
 
     render () {
+        
         return (
             <div>
                 <main>

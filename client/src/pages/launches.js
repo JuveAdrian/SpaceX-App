@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ContentData from '../components/ContentContainer/ContentData';
+import Navbar from '../components/Navbar';
 
 class Launches extends React.Component {
     state = {
@@ -17,6 +18,7 @@ class Launches extends React.Component {
     render () {
         return (
             <div>
+                <Navbar />
                 <ContentData state={{ pageName: this.state.pageName, launches: this.state.launches }} />
             </div>
             
