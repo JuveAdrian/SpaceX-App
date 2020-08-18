@@ -66,6 +66,7 @@ const theme = createMuiTheme({
       readMoreBtn: {
         color: '#fff',
         backgroundColor: '#2196f3',
+        textDecoration: 'none',
         padding: '10px 14px',
         marginBottom: '14px',
         justifyContent: 'center',
@@ -109,19 +110,52 @@ class ContentData extends React.Component {
                   title={el.name}
                   subheader={moment(el.date).format('MMMM D, YYYY')}
                 />
-                <CardMedia
-                  className={classes.media}
-                  image={ el.links.flickr.original.length !== 0 ? el.links.flickr.original[0] : imageSpacex }
-                  title={el.title}
-                    
-                />
+                <Link to={{ 
+                    pathname: `/launche/${el.id}`,
+                    pageName: el.name, 
+                    state: { 
+                      name: el.name,
+                      img: el.links.patch.small,
+                      gallery: el.links.flickr.original,
+                      success: el.success,
+                      details: el.details,
+                      date: el.date_utc,
+                      launchpad: el.launchpad,
+                      rocket: el.rocket }
+                }}>
+                  <CardMedia
+                    className={classes.media}
+                    image={ el.links.flickr.original.length !== 0 ? el.links.flickr.original[0] : imageSpacex }
+                    title={el.title}
+                  />
+                </Link>
                 <CardContent>
                   <Typography variant="body2" color="#eceff1" component="p" style={{ minHeight: '60px' }}>
                     { el.details !== null ? el.details.slice(0, 80) + '...' : 'No description for this launche' }
                   </Typography>
                 </CardContent>
-                <CardActions disableSpacing={true} style={{ justifyContent: 'center' }}>
-                  <Button children={'Read more'} href={'/launche/5eb87d42ffd86e000604b384'} className={classes.readMoreBtn} />
+                <CardActions 
+                  disableSpacing={true} 
+                  style={{ justifyContent: 'center' }}
+                >
+                <Link to={{ 
+                    pathname: `/launche/${el.id}`, 
+                    state: { 
+                      name: el.name,
+                      img: el.links.patch.small,
+                      gallery: el.links.flickr.original,
+                      success: el.success,
+                      details: el.details,
+                      date: el.date_utc,
+                      launchpad: el.launchpad,
+                      rocket: el.rocket }
+                  }}>
+                    <Button 
+                      children={'Read more'} 
+                      href={'/launche/5eb87d42ffd86e000604b384'} 
+                      className={classes.readMoreBtn} 
+                    />
+                  </Link>
                 </CardActions>
                 </Card>
               </Grid>

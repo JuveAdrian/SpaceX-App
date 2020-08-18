@@ -1,10 +1,13 @@
 import React from 'react';
 import moment from 'moment';
 
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
 class Launche extends React.Component {
     
     state = {
-        launchpadId: this.props.localtion.state.launchpad,
+        launchpadId: this.props.location.state.launchpad,
         rocketId: this.props.location.state.rocket
     }
 
@@ -15,8 +18,8 @@ class Launche extends React.Component {
             this.setState({status : 'Failed', color: '#FF3232'})
         }
     }
+
     componentDidMount() {
-        
         this.missionStatus();
 
         fetch(`https://api.spacexdata.com/v4/launchpads/${this.state.launchpadId}`)
@@ -29,10 +32,9 @@ class Launche extends React.Component {
     }
 
     render() {
-        
-        console.log(this.props);
         return (
             <div>
+                <Navbar pageName={this.props.location.state.name} />
                 <main>
                     <div className="data-container-header">
                         <h1>{this.props.location.state.name}</h1>
@@ -56,8 +58,6 @@ class Launche extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        
-
                         <div className="gallery">
                             <h1>MISSION IMAGES</h1>
                             {this.props.location.state.gallery.map( img => (
@@ -66,6 +66,7 @@ class Launche extends React.Component {
                         </div>
                     </div>   
                 </main>
+                <Footer />
             </div>
         )
     }
