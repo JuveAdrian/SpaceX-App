@@ -17,7 +17,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 
-import imageSpacex from '../../spaceX.jpg';
+import imageSpacex from '../../spaceX.jpg'; 
 
 const theme = createMuiTheme({
     palette: {

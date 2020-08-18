@@ -2,13 +2,10 @@ import React from 'react';
 import moment from 'moment';
 
 class Launche extends React.Component {
+    
     state = {
-        launchpadId: this.props.location.state.launchpad,
-        rocketId: this.props.location.state.rocket,
-        launchpad: '',
-        rocket: '',
-        status: '',
-        color: '',
+        launchpadId: this.props.localtion.state.launchpad,
+        rocketId: this.props.location.state.rocket
     }
 
     missionStatus() {
@@ -18,7 +15,6 @@ class Launche extends React.Component {
             this.setState({status : 'Failed', color: '#FF3232'})
         }
     }
-
     componentDidMount() {
         
         this.missionStatus();
@@ -33,6 +29,8 @@ class Launche extends React.Component {
     }
 
     render() {
+        
+        console.log(this.props);
         return (
             <div>
                 <main>
