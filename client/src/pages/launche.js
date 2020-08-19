@@ -4,6 +4,18 @@ import moment from 'moment';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+import { Grid, makeStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import { ThemeProvider } from '@material-ui/styles';
+
+const useStyles = theme => makeStyles({
+    content: {
+        marginTop: '150px'
+    }
+});
+
 class Launche extends React.Component {
     
     state = {
@@ -32,44 +44,25 @@ class Launche extends React.Component {
     }
 
     render() {
+        const { classes } = this.props;
         return (
             <div>
                 <Navbar pageName={this.props.location.state.name} />
-                <main>
-                    <div className="data-container-header">
-                        <h1>{this.props.location.state.name}</h1>
-                    </div>
-                    <div className="single-item-container">
-                        <div className="success" style={{backgroundColor: this.state.color}}>{this.state.status}</div>
-
-                        <div className="describe-group">
-                            <div className="image">
-                                <img src={this.props.location.state.img} alt="" />
-                            </div>
-                            <div className="describe">
-                                <h1>{this.props.location.state.name}</h1>
-                                <p>{this.props.location.state.details}</p>
-                            </div>
-                            <div className="details">
-                                <ul>
-                                    <li><span>Launch Date:</span> {moment(this.props.location.state.date).format('MMMM D, YYYY')}</li>
-                                    <li><span>Launch site:</span> {this.state.launchpad}</li>
-                                    <li><span>Rocket:</span> {this.state.rocket}</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="gallery">
-                            <h1>MISSION IMAGES</h1>
-                            {this.props.location.state.gallery.map( img => (
-                                <img className="cropped" src={img} alt={img} />
-                            ))}
-                        </div>
-                    </div>   
-                </main>
+                <ThemeProvider >
+                    <main className={classes.content}>
+                        <Grid container xs={12}>
+                            <Grid item xs={11} sm={10} md={8} spacing={12} >
+                                <Card>
+                                    <CardHeader title={this.props.location.state.name}></CardHeader>
+                                </Card>
+                            </Grid>
+                        </Grid>
+                    </main>
+                </ThemeProvider>
                 <Footer />
             </div>
         )
     }
 }
 
-export default Launche;
+export default withStyles(useStyles)(Launche);
