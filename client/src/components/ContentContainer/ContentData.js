@@ -46,12 +46,13 @@ const theme = createMuiTheme({
           justifyContent: 'center'
       },
       content: {
-        marginTop: '20px'
+        marginTop: '20px',
+        paddingLeft: '20px'
       },
       avatar: {
-          width: '80px',
-          height: '80px',
-          backgroundColor: 'rgba(0,0,0,0.0)'
+        width: '80px',
+        height: '80px',
+        backgroundColor: 'rgba(0,0,0,0.0)'
       },
       media: {
         height: '210px'
