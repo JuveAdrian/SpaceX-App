@@ -89,12 +89,12 @@ class ContentData extends React.Component {
                 <Card className={classes.root}>
                 <CardHeader
                   avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar} >
+                  <Avatar aria-label="launche" className={classes.avatar} >
                   <Link to={{ 
                     pathname: `/launche/${el.id}`, 
                     state: { 
                       name: el.name,
-                      img: el.links.patch.small,
+                      img: el.links.patch.large,
                       gallery: el.links.flickr.original,
                       success: el.success,
                       details: el.details,
