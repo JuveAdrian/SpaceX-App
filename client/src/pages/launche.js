@@ -49,11 +49,9 @@ class Launche extends React.Component {
     }
 
     render() {
-        const { classes } = this.props;
         return (
             <div>
                 <Navbar pageName={this.props.location.state.name} />
-                <ThemeProvider >
                     <main >
                         <Grid container xs={12}>
                             <Grid item xs={11} sm={10} md={8} spacing={12}>
@@ -95,7 +93,6 @@ class Launche extends React.Component {
                             </Grid>
                         </Grid>
                     </main>
-                </ThemeProvider>
                 <Footer />
             </div>
         )

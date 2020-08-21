@@ -1,6 +1,8 @@
 import React from 'react';
 
 import ContentHeader from '../components/ContentContainer/ContentHeader';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 class Member extends React.Component {
     state = {

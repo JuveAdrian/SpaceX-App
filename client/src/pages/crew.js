@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import ContentHeader from '../components/ContentContainer/ContentHeader';
 import Footer from '../components/Footer';
 
+import { Grid, Card, CardHeader } from '@material-ui/core';
+
 class Crew extends React.Component {
     state = {
         crew: [],
@@ -22,11 +24,11 @@ class Crew extends React.Component {
             <div>
                 <Navbar pageName={'Crew'} />
                 <main>
-                    <div className="crewContainer">
-                        <ContentHeader state={{ pageName: this.state.pageName }} />
-                        <div className="crewMemberBox">
-                        {this.state.crew.map( el => (
-                            <div className="crewMember">
+                    <Grid xs={12} container spacing={3}>
+                    {this.state.crew.map( el => (
+                        <Grid xs={11} sm={5} item style={{ margin: '20px 0' }}>
+                            <Card style={{ backgroundColor: '#455a64' }}>
+                                
                                 <Link to={{ 
                                     pathname: `/member/${el.id}`,
                                     state: {
@@ -37,24 +39,16 @@ class Crew extends React.Component {
                                         name: el.name
                                     } 
                                 }} >
-                                    <h1>{ el.name }</h1>
+                                    <CardHeader title={el.name} style={{ color: '#fff', textAlign: 'center' }} />
+                                    <img src={el.image} alt={el.name} style={{ width: '100%' }} />
                                 </Link>
-                                <Link to={{ 
-                                    pathname: `/member/${el.id}`,
-                                    state: {
-                                        wikipedia: el.wikipedia,
-                                        agency: el.agency,
-                                        status: el.status,
-                                        image: el.image,
-                                        name: el.name
-                                    } 
-                                }} >
-                                    <img src={el.image} alt={el.name} />
-                                </Link>
-                            </div>
-                        ))}
-                        </div>
-                    </div>
+                            </Card>
+                        </Grid>
+                    ))}
+                    </Grid>
+
+
+
                 </main>
                 <Footer />
             </div>
